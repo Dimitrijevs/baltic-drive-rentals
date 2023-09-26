@@ -9,7 +9,7 @@
                 <img :src="require('@/assets/email.png')" alt="#">
                 <div class="email-container">
                     <h1>Contact Us</h1>
-                    <p>example@gmail.com</p>
+                    <p>support@balticdriverentals.com</p>
                 </div>
             </div>
         </div>

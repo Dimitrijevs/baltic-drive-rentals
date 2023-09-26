@@ -38,6 +38,18 @@
       </div>
   </div>
 
+  <div class="middle-container-second">
+    <div class="left-container">
+        <h1>A new approach to mobility!</h1>
+        <p>
+            "Baltic Drive Rentls" aims to create a cleaner and more open city. How? 
+            One "Baltic Drive Rentls" car that can be shared can replace up to 12 private cars 
+            that most of the time stand still and fill neighborhoods and streets.
+        </p>
+    </div>
+    <img :src="require('@/assets/car2.jpg')" alt="">
+  </div>
+
   <div class="bottom-container">
       <img :src="require('@/assets/car3.jpg')" alt="#">
       <div class="use-container">
@@ -130,6 +142,7 @@
   .middle-container > .facts-container > .fact {
       width: 30%;
       text-align: center;
+      margin: 0 20px;
   }
 
   .middle-container > .facts-container > .fact > h1 {
@@ -138,6 +151,49 @@
 
   .middle-container > .facts-container > .fact > h1:hover {
       color: var(--skin);
+  }
+
+  .middle-container > .facts-container > .fact > p {
+    line-height: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .middle-container-second {
+    display: flex;
+    align-items: center;
+    margin: 7% auto;
+    width: 70%;
+  }
+
+  .middle-container-second > img {
+    border-radius: 10px;
+    width: 35%;
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+
+  .middle-container-second > img:hover {
+    opacity: 1;
+  }
+
+  .middle-container-second > .left-container {
+    width: 50%;
+    margin-right: 30px;
+  }
+
+  .middle-container-second > .left-container > h1 {
+    font-size: 4rem;
+    margin: 0;
+    transition: 0.3s;
+  }
+
+  .middle-container-second > .left-container > h1:hover {
+    color: var(--skin);
+  }
+
+  .middle-container-second > .left-container > p {
+    line-height: 2rem;
+    letter-spacing: 1px;
   }
 
   .bottom-container {
@@ -173,7 +229,8 @@
       color: var(--skin);
   }
 
-  .bottom-container > .use-container > ol {
-      font-size: 1.3rem;
+  .bottom-container > .use-container > ol > li {
+    line-height: 2rem;
+    letter-spacing: 1px;
   }
 </style>
