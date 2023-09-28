@@ -28,7 +28,7 @@ export default {
         background-color: var(--black);
         box-shadow: 0px 6px 16px 0px var(--grey);
         position: fixed;
-        z-index: 1;
+        z-index: 2;
         top: 0;
     }
 
