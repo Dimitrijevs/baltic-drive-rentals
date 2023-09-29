@@ -55,26 +55,130 @@
     <div class="user-box">
         <div class="user-box-container">
             <img :src="require('@/assets/vw-polo.jpg')" alt="">
-            <h1>Volkswagen Polo 2020</h1>
-        </div>
-
-        <div class="user-box-container">
-            <img :src="require('@/assets/vw-arteon.jpeg')" alt="">
-            <h1>Volkswagen Arteon 2019</h1>
-        </div>
-
-        <div class="user-box-container">
-            <img :src="require('@/assets/tesla-3.jpeg')" alt="">
-            <h1>Tesla Model 3 2017</h1>
+            <h1>Volkswagen Polo</h1>
             <ul>
                 <li>
                     <p>Gads</p>
-                    <span>2020</span>
+                    <span>2017</span>
                 </li>
                 <li>
                     <p>Degviela</p>
                     <span>Elektrība</span>
                 </li>
+                <!-- <li>
+                    <p>Dzinējs</p>
+                    <span>Elektro dzinējs</span>
+                </li> -->
+                <li>
+                    <p>Zirgspēki</p>
+                    <span>271</span>
+                </li>
+                <li>
+                    <p>0-100km/h</p>
+                    <span>5.4s</span>
+                </li>
+                <li>
+                    <p>Pārnesumkārba</p>
+                    <span>Automāts</span>
+                </li>
+                <li>
+                    <p>Piedziņa</p>
+                    <span>Aizmugurēja</span>
+                </li>
+                <!-- <li>
+                    <p>Virsbūves tips</p>
+                    <span>Sedans</span>
+                </li>
+                <li>
+                    <p>Sēdvietas</p>w
+                    <span>5</span>
+                </li> -->
+            </ul>
+        </div>
+
+        <div class="user-box-container">
+            <img :src="require('@/assets/vw-arteon.jpeg')" alt="">
+            <h1>Volkswagen Arteon</h1>
+            <ul>
+                <li>
+                    <p>Gads</p>
+                    <span>2017</span>
+                </li>
+                <li>
+                    <p>Degviela</p>
+                    <span>Elektrība</span>
+                </li>
+                <!-- <li>
+                    <p>Dzinējs</p>
+                    <span>Elektro dzinējs</span>
+                </li> -->
+                <li>
+                    <p>Zirgspēki</p>
+                    <span>271</span>
+                </li>
+                <li>
+                    <p>0-100km/h</p>
+                    <span>5.4s</span>
+                </li>
+                <li>
+                    <p>Pārnesumkārba</p>
+                    <span>Automāts</span>
+                </li>
+                <li>
+                    <p>Piedziņa</p>
+                    <span>Aizmugurēja</span>
+                </li>
+                <!-- <li>
+                    <p>Virsbūves tips</p>
+                    <span>Sedans</span>
+                </li>
+                <li>
+                    <p>Sēdvietas</p>w
+                    <span>5</span>
+                </li> -->
+            </ul>
+        </div>
+
+        <div class="user-box-container">
+            <img :src="require('@/assets/tesla-3.jpeg')" alt="">
+            <h1>Tesla Model 3 Long Range</h1>
+            <ul>
+                <li>
+                    <p>Gads</p>
+                    <span>2017</span>
+                </li>
+                <li>
+                    <p>Degviela</p>
+                    <span>Elektrība</span>
+                </li>
+                <!-- <li>
+                    <p>Dzinējs</p>
+                    <span>Elektro dzinējs</span>
+                </li> -->
+                <li>
+                    <p>Zirgspēki</p>
+                    <span>271</span>
+                </li>
+                <li>
+                    <p>0-100km/h</p>
+                    <span>5.4s</span>
+                </li>
+                <li>
+                    <p>Pārnesumkārba</p>
+                    <span>Automāts</span>
+                </li>
+                <li>
+                    <p>Piedziņa</p>
+                    <span>Aizmugurēja</span>
+                </li>
+                <!-- <li>
+                    <p>Virsbūves tips</p>
+                    <span>Sedans</span>
+                </li>
+                <li>
+                    <p>Sēdvietas</p>w
+                    <span>5</span>
+                </li> -->
             </ul>
         </div>
     </div>
@@ -233,12 +337,19 @@
     margin: 7% auto;
     background-color: #e9e9e8;
     border-radius: 10px;
+    padding: 0 10px 20px;
   }
 
   .user-choices > h1 {
     text-align: center;
     font-size: 4rem;
     padding-top: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .user-choices > h1:hover {
+    color: var(--skin);
   }
 
   .user-choices > .user-box {
@@ -251,6 +362,16 @@
     margin: 0 50px;
     border: 2px solid #000;
     border-radius: 10px;
+    padding: 10px;
+    background: rgb(237,237,237);
+    background: linear-gradient(160deg, rgba(237,237,237,1) 0%, rgba(255,217,203,1) 100%);
+    transition: 0.3s;
+    opacity: 0.8;
+  }
+
+  .user-choices > .user-box > .user-box-container:hover {
+    transform: scale(1.05);
+    opacity: 1;
   }
 
   .user-choices > .user-box > .user-box-container > ul {
@@ -265,16 +386,25 @@
     justify-content: space-between;
   }
 
+  .user-choices > .user-box > .user-box-container > ul > li > p {
+    margin: 4px;
+  }
+
+  .user-choices > .user-box > .user-box-container > ul > li > span {
+    font-weight: bold;
+  }
+
   .user-choices > .user-box > .user-box-container > img {
     width: 300px;
-    height: 170px;
     margin: 10px 20px 0 20px;
     border-radius: 10px;
+    cursor: pointer;
   }
 
   .user-choices > .user-box > .user-box-container > h1 {
     font-size: 1.2rem;
     margin-left: 20px;
+    transition: 0.3s;
   }
 
   .bottom-container {
@@ -295,7 +425,7 @@
 
   .bottom-container > img:hover {
       opacity: 1;
-      transform: scale(1.05);
+      transform: scale(1.03);
   }
 
   .bottom-container > .use-container {
