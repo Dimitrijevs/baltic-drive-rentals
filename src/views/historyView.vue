@@ -123,8 +123,8 @@
 
 .text-box {
     padding: 20px 30px;
-    background: rgb(233,233,233);
-    background: linear-gradient(140deg, rgba(233,233,233,1) 0%, rgba(255,182,158,1) 100%);
+    background: rgb(255,255,255);
+    background: linear-gradient(160deg, rgba(255,255,255,1) 0%, rgba(215,215,215,1) 100%);
     position: relative;
     border-radius: 6px;
     font-size: 1rem;

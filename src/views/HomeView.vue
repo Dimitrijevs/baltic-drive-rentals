@@ -58,32 +58,32 @@
             <h1>Volkswagen Polo</h1>
             <ul>
                 <li>
-                    <p>Gads</p>
-                    <span>2017</span>
+                    <p>Release Year</p>
+                    <span>2016</span>
                 </li>
                 <li>
-                    <p>Degviela</p>
-                    <span>Elektrība</span>
+                    <p>Fuel Type</p>
+                    <span>Petrol</span>
                 </li>
                 <!-- <li>
                     <p>Dzinējs</p>
                     <span>Elektro dzinējs</span>
                 </li> -->
                 <li>
-                    <p>Zirgspēki</p>
-                    <span>271</span>
+                    <p>Horse Powers</p>
+                    <span>125hp</span>
                 </li>
                 <li>
                     <p>0-100km/h</p>
-                    <span>5.4s</span>
+                    <span>10.4s</span>
                 </li>
                 <li>
-                    <p>Pārnesumkārba</p>
-                    <span>Automāts</span>
+                    <p>Gearbox</p>
+                    <span>Mechanical</span>
                 </li>
                 <li>
-                    <p>Piedziņa</p>
-                    <span>Aizmugurēja</span>
+                    <p>Drive Type</p>
+                    <span>Front Wheel Drive</span>
                 </li>
                 <!-- <li>
                     <p>Virsbūves tips</p>
@@ -93,6 +93,57 @@
                     <p>Sēdvietas</p>w
                     <span>5</span>
                 </li> -->
+                <li>
+                    <p>Cena</p>
+                    <span>15€ / Day</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="user-box-container">
+            <img :src="require('@/assets/toyota-rav4.jpeg')" alt="">
+            <h1>Toyota Rav4</h1>
+            <ul>
+                <li>
+                    <p>Release Year</p>
+                    <span>2020</span>
+                </li>
+                <li>
+                    <p>Fuel Type</p>
+                    <span>Hybrid</span>
+                </li>
+                <!-- <li>
+                    <p>Dzinējs</p>
+                    <span>Elektro dzinējs</span>
+                </li> -->
+                <li>
+                    <p>Horse Powers</p>
+                    <span>218hp</span>
+                </li>
+                <li>
+                    <p>0-100km/h</p>
+                    <span>8.5s</span>
+                </li>
+                <li>
+                    <p>Gearbox</p>
+                    <span>Automatic</span>
+                </li>
+                <li>
+                    <p>Drive Type</p>
+                    <span>4x4</span>
+                </li>
+                <!-- <li>
+                    <p>Virsbūves tips</p>
+                    <span>Sedans</span>
+                </li>
+                <li>
+                    <p>Sēdvietas</p>w
+                    <span>5</span>
+                </li> -->
+                <li>
+                    <p>Price</p>
+                    <span>40€ / Day</span>
+                </li>
             </ul>
         </div>
 
@@ -101,32 +152,32 @@
             <h1>Volkswagen Arteon</h1>
             <ul>
                 <li>
-                    <p>Gads</p>
+                    <p>Release Year</p>
                     <span>2017</span>
                 </li>
                 <li>
-                    <p>Degviela</p>
-                    <span>Elektrība</span>
+                    <p>Fuel Type</p>
+                    <span>Diesel</span>
                 </li>
                 <!-- <li>
                     <p>Dzinējs</p>
                     <span>Elektro dzinējs</span>
                 </li> -->
                 <li>
-                    <p>Zirgspēki</p>
-                    <span>271</span>
+                    <p>Horse Powers</p>
+                    <span>150hp</span>
                 </li>
                 <li>
                     <p>0-100km/h</p>
-                    <span>5.4s</span>
+                    <span>9.1s</span>
                 </li>
                 <li>
-                    <p>Pārnesumkārba</p>
-                    <span>Automāts</span>
+                    <p>Gearbox</p>
+                    <span>Automatic</span>
                 </li>
                 <li>
-                    <p>Piedziņa</p>
-                    <span>Aizmugurēja</span>
+                    <p>Drive Type</p>
+                    <span>Front Wheel Drive</span>
                 </li>
                 <!-- <li>
                     <p>Virsbūves tips</p>
@@ -136,6 +187,10 @@
                     <p>Sēdvietas</p>w
                     <span>5</span>
                 </li> -->
+                <li>
+                    <p>Price</p>
+                    <span>30€ / Day</span>
+                </li>
             </ul>
         </div>
 
@@ -144,32 +199,32 @@
             <h1>Tesla Model 3 Long Range</h1>
             <ul>
                 <li>
-                    <p>Gads</p>
+                    <p>Release Year</p>
                     <span>2017</span>
                 </li>
                 <li>
-                    <p>Degviela</p>
-                    <span>Elektrība</span>
+                    <p>Fuel Type</p>
+                    <span>Electric</span>
                 </li>
                 <!-- <li>
                     <p>Dzinējs</p>
                     <span>Elektro dzinējs</span>
                 </li> -->
                 <li>
-                    <p>Zirgspēki</p>
-                    <span>271</span>
+                    <p>Horse Powers</p>
+                    <span>271hp</span>
                 </li>
                 <li>
                     <p>0-100km/h</p>
                     <span>5.4s</span>
                 </li>
                 <li>
-                    <p>Pārnesumkārba</p>
-                    <span>Automāts</span>
+                    <p>Gearbox</p>
+                    <span>Automatic</span>
                 </li>
                 <li>
-                    <p>Piedziņa</p>
-                    <span>Aizmugurēja</span>
+                    <p>Drive Type</p>
+                    <span>Rear Wheel Drive</span>
                 </li>
                 <!-- <li>
                     <p>Virsbūves tips</p>
@@ -179,6 +234,104 @@
                     <p>Sēdvietas</p>w
                     <span>5</span>
                 </li> -->
+                <li>
+                    <p>Price</p>
+                    <span>50€ / Day</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="user-box-container">
+            <img :src="require('@/assets/bmw-3series.jpeg')" alt="">
+            <h1>BMW 320i</h1>
+            <ul>
+                <li>
+                    <p>Release Year</p>
+                    <span>2020</span>
+                </li>
+                <li>
+                    <p>Fuel Type</p>
+                    <span>Petrol</span>
+                </li>
+                <!-- <li>
+                    <p>Dzinējs</p>
+                    <span>Elektro dzinējs</span>
+                </li> -->
+                <li>
+                    <p>Horse Powers</p>
+                    <span>184hp</span>
+                </li>
+                <li>
+                    <p>0-100km/h</p>
+                    <span>7.0s</span>
+                </li>
+                <li>
+                    <p>Gearbox</p>
+                    <span>Automatic</span>
+                </li>
+                <li>
+                    <p>Drive Type</p>
+                    <span>Rear Wheel Drive</span>
+                </li>
+                <!-- <li>
+                    <p>Virsbūves tips</p>
+                    <span>Sedans</span>
+                </li>
+                <li>
+                    <p>Sēdvietas</p>w
+                    <span>5</span>
+                </li> -->
+                <li>
+                    <p>Price</p>
+                    <span>35€ / Day</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="user-box-container">
+            <img :src="require('@/assets/audi-a4.jpeg')" alt="">
+            <h1>Audi a4</h1>
+            <ul>
+                <li>
+                    <p>Release Year</p>
+                    <span>2021</span>
+                </li>
+                <li>
+                    <p>Fuel Type</p>
+                    <span>Diesel</span>
+                </li>
+                <!-- <li>
+                    <p>Dzinējs</p>
+                    <span>Elektro dzinējs</span>
+                </li> -->
+                <li>
+                    <p>Horse Powers</p>
+                    <span>201hp</span>
+                </li>
+                <li>
+                    <p>0-100km/h</p>
+                    <span>6.3s</span>
+                </li>
+                <li>
+                    <p>Gearbox</p>
+                    <span>Automatic</span>
+                </li>
+                <li>
+                    <p>Drive Type</p>
+                    <span>4x4</span>
+                </li>
+                <!-- <li>
+                    <p>Virsbūves tips</p>
+                    <span>Sedans</span>
+                </li>
+                <li>
+                    <p>Sēdvietas</p>w
+                    <span>5</span>
+                </li> -->
+                <li>
+                    <p>Price</p>
+                    <span>40€ / Day</span>
+                </li>
             </ul>
         </div>
     </div>
@@ -243,14 +396,17 @@
   .top-container > .image-container {
       text-align: center;
       margin-top: 3%;
-      opacity: 0.7;
       width: 60%;
-      transition: 0.3s;
   }
 
-  .top-container > .image-container:hover {
+  .top-container > .image-container > img {
+    transition: 0.3s;
+    opacity: 0.7;
+  }
+
+  .top-container > .image-container > img:hover {
       opacity: 1;
-      transform: scale(1.05);
+      transform: scale(1.02);
   }
 
   .top-container > .image-container > img {
@@ -309,7 +465,7 @@
 
   .middle-container-second > img:hover {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 
   .middle-container-second > .left-container {
@@ -359,18 +515,18 @@
   }
 
   .user-choices > .user-box > .user-box-container {
-    margin: 0 50px;
+    margin: 20px 50px;
     border: 2px solid #000;
     border-radius: 10px;
     padding: 10px;
-    background: rgb(237,237,237);
-    background: linear-gradient(160deg, rgba(237,237,237,1) 0%, rgba(255,217,203,1) 100%);
+    background: rgb(255,255,255);
+    background: linear-gradient(150deg, rgba(255,255,255,1) 0%, rgba(196,196,196,1) 100%);
     transition: 0.3s;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   .user-choices > .user-box > .user-box-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     opacity: 1;
   }
 
