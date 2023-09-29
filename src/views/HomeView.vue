@@ -50,6 +50,36 @@
     <img :src="require('@/assets/car2.jpg')" alt="">
   </div>
 
+  <div class="user-choices">
+    <h1>Most Popular User Choices</h1>
+    <div class="user-box">
+        <div class="user-box-container">
+            <img :src="require('@/assets/vw-polo.jpg')" alt="">
+            <h1>Volkswagen Polo 2020</h1>
+        </div>
+
+        <div class="user-box-container">
+            <img :src="require('@/assets/vw-arteon.jpeg')" alt="">
+            <h1>Volkswagen Arteon 2019</h1>
+        </div>
+
+        <div class="user-box-container">
+            <img :src="require('@/assets/tesla-3.jpeg')" alt="">
+            <h1>Tesla Model 3 2017</h1>
+            <ul>
+                <li>
+                    <p>Gads</p>
+                    <span>2020</span>
+                </li>
+                <li>
+                    <p>Degviela</p>
+                    <span>Elektrība</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
   <div class="bottom-container">
       <img :src="require('@/assets/car3.jpg')" alt="#">
       <div class="use-container">
@@ -116,6 +146,7 @@
 
   .top-container > .image-container:hover {
       opacity: 1;
+      transform: scale(1.05);
   }
 
   .top-container > .image-container > img {
@@ -174,6 +205,7 @@
 
   .middle-container-second > img:hover {
     opacity: 1;
+    transform: scale(1.05);
   }
 
   .middle-container-second > .left-container {
@@ -196,6 +228,55 @@
     letter-spacing: 1px;
   }
 
+  .user-choices {
+    width: 95%;
+    margin: 7% auto;
+    background-color: #e9e9e8;
+    border-radius: 10px;
+  }
+
+  .user-choices > h1 {
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 30px;
+  }
+
+  .user-choices > .user-box {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+  }
+
+  .user-choices > .user-box > .user-box-container {
+    margin: 0 50px;
+    border: 2px solid #000;
+    border-radius: 10px;
+  }
+
+  .user-choices > .user-box > .user-box-container > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+  }
+
+  .user-choices > .user-box > .user-box-container > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .user-choices > .user-box > .user-box-container > img {
+    width: 300px;
+    height: 170px;
+    margin: 10px 20px 0 20px;
+    border-radius: 10px;
+  }
+
+  .user-choices > .user-box > .user-box-container > h1 {
+    font-size: 1.2rem;
+    margin-left: 20px;
+  }
+
   .bottom-container {
       display: flex;
       width: 70%;
@@ -214,6 +295,7 @@
 
   .bottom-container > img:hover {
       opacity: 1;
+      transform: scale(1.05);
   }
 
   .bottom-container > .use-container {

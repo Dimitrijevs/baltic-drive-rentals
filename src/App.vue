@@ -27,6 +27,10 @@ export default {
     --grey: #7a7a7a;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }

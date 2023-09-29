@@ -1,7 +1,7 @@
 <template>
     <div class="timeline">
 
-        <div class="container container-left-container">
+        <div class="history-container container-left-container">
             <img :src="require('@/assets/google.png')" alt="#">
             <div class="text-box">
                 <h2>We are open!</h2>
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="container container-right-container">
+        <div class="history-container container-right-container">
             <img :src="require('@/assets/vw-logo.png')" alt="#">
             <div class="text-box">
                 <h2>We extendet auto park!</h2>
@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <div class="container container-left-container">
+        <div class="history-container container-left-container">
             <img :src="require('@/assets/toyota.png')" alt="#">
             <div class="text-box">
                 <h2>Toyotas are coming!</h2>
@@ -40,7 +40,7 @@
             </div>
         </div>
 
-        <div class="container container-right-container">
+        <div class="history-container container-right-container">
             <img :src="require('@/assets/tesla.png')" alt="#">
             <div class="text-box">
                 <h2>First electric car!</h2>
@@ -53,31 +53,27 @@
             </div>
         </div>
 
-        <div class="container container-left-container">
-            <img :src="require('@/assets/tesla.png')" alt="#">
+        <div class="history-container container-left-container">
+            <img :src="require('@/assets/lit.png')" alt="#">
             <div class="text-box">
-                <h2>Header 4</h2>
+                <h2>Hello Lithuania!</h2>
                 <small>2019</small>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Sapiente libero dignissimos 
-                    dicta! Impedit esse obcaecati, 
-                    reprehenderit repellendus dolor totam qui?
+                    We opened first office in Vilnius. 
+                    Our car now available for Lithuanian citizens.
                 </p>
                 <div class="left-container-arrow"></div>
             </div>
         </div>
 
-        <div class="container container-right-container">
-            <img :src="require('@/assets/tesla.png')" alt="#">
+        <div class="history-container container-right-container">
+            <img :src="require('@/assets/est.png')" alt="#">
             <div class="text-box">
-                <h2>Header 4</h2>
-                <small>2018 - 2019</small>
+                <h2>Hello Estonia!</h2>
+                <small>2020</small>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Sapiente libero dignissimos 
-                    dicta! Impedit esse obcaecati, 
-                    reprehenderit repellendus dolor totam qui?
+                    We opened first office in Tallin. 
+                    Our car now available for Estonian citizens.
                 </p>
                 <div class="right-container-arrow"></div>
             </div>
@@ -96,7 +92,7 @@
     box-sizing: border-box;
 }
 
-.container {
+.history-container {
     padding: 10px 50px;
     position: relative;
     width: 40%;
@@ -115,9 +111,10 @@
     }
 }
 
-.container img {
+.history-container img {
     position: absolute;
     width: 40px;
+    height: 40px;
     border-radius: 50%;
     right: -20px;
     top: 32px;
@@ -126,10 +123,18 @@
 
 .text-box {
     padding: 20px 30px;
-    background-color: #fff;
+    background: rgb(233,233,233);
+    background: linear-gradient(140deg, rgba(233,233,233,1) 0%, rgba(255,182,158,1) 100%);
     position: relative;
     border-radius: 6px;
     font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.text-box:hover {
+    opacity: 1;
 }
 
 .container-left-container {
