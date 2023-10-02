@@ -2,7 +2,7 @@
   <div class="top-container">
       <div class="text-container">
           <h1>Mobility when you need it!</h1>
-          <p>Only from 30 €/day!</p>
+          <p>Only from 14 €/day!</p>
           <a href="https://play.google.com/store/apps/details?id=com.primeleasing.citybee&hl=en&pli=1">Download App!</a>
       </div>
       <div class="image-container">
@@ -51,309 +51,73 @@
   </div>
 
   <div class="user-choices">
-    <h1>Most Popular User Choices</h1>
+    <h1>Popular Choices</h1>
     <div class="user-box">
-        <div class="user-box-container">
-            <img :src="require('@/assets/vw-polo.jpg')" alt="">
-            <h1>Volkswagen Polo</h1>
-            <ul>
-                <li>
-                    <p>Release Year</p>
-                    <span>2016</span>
-                </li>
-                <li>
-                    <p>Fuel Type</p>
-                    <span>Petrol</span>
-                </li>
-                <!-- <li>
-                    <p>Dzinējs</p>
-                    <span>Elektro dzinējs</span>
-                </li> -->
-                <li>
-                    <p>Horse Powers</p>
-                    <span>125hp</span>
-                </li>
-                <li>
-                    <p>0-100km/h</p>
-                    <span>10.4s</span>
-                </li>
-                <li>
-                    <p>Gearbox</p>
-                    <span>Mechanical</span>
-                </li>
-                <li>
-                    <p>Drive Type</p>
-                    <span>Front Wheel Drive</span>
-                </li>
-                <!-- <li>
-                    <p>Virsbūves tips</p>
-                    <span>Sedans</span>
-                </li>
-                <li>
-                    <p>Sēdvietas</p>w
-                    <span>5</span>
-                </li> -->
-                <li>
-                    <p>Cena</p>
-                    <span>15€ / Day</span>
-                </li>
-            </ul>
-        </div>
+      <div class="user-box-container" v-for="car in userChoices" :key="car.id">
+        <img :src="require(`@/assets/${car.photo}`)" alt="">
+        <h1>{{ car.title }}</h1>
+        <ul>
+          <li>
+            <p>Price</p>
+            <span>{{ car.price }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-        <div class="user-box-container">
-            <img :src="require('@/assets/toyota-rav4.jpeg')" alt="">
-            <h1>Toyota Rav4</h1>
-            <ul>
-                <li>
-                    <p>Release Year</p>
-                    <span>2020</span>
-                </li>
-                <li>
-                    <p>Fuel Type</p>
-                    <span>Hybrid</span>
-                </li>
-                <!-- <li>
-                    <p>Dzinējs</p>
-                    <span>Elektro dzinējs</span>
-                </li> -->
-                <li>
-                    <p>Horse Powers</p>
-                    <span>218hp</span>
-                </li>
-                <li>
-                    <p>0-100km/h</p>
-                    <span>8.5s</span>
-                </li>
-                <li>
-                    <p>Gearbox</p>
-                    <span>Automatic</span>
-                </li>
-                <li>
-                    <p>Drive Type</p>
-                    <span>4x4</span>
-                </li>
-                <!-- <li>
-                    <p>Virsbūves tips</p>
-                    <span>Sedans</span>
-                </li>
-                <li>
-                    <p>Sēdvietas</p>w
-                    <span>5</span>
-                </li> -->
-                <li>
-                    <p>Price</p>
-                    <span>40€ / Day</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="user-box-container">
-            <img :src="require('@/assets/vw-arteon.jpeg')" alt="">
-            <h1>Volkswagen Arteon</h1>
-            <ul>
-                <li>
-                    <p>Release Year</p>
-                    <span>2017</span>
-                </li>
-                <li>
-                    <p>Fuel Type</p>
-                    <span>Diesel</span>
-                </li>
-                <!-- <li>
-                    <p>Dzinējs</p>
-                    <span>Elektro dzinējs</span>
-                </li> -->
-                <li>
-                    <p>Horse Powers</p>
-                    <span>150hp</span>
-                </li>
-                <li>
-                    <p>0-100km/h</p>
-                    <span>9.1s</span>
-                </li>
-                <li>
-                    <p>Gearbox</p>
-                    <span>Automatic</span>
-                </li>
-                <li>
-                    <p>Drive Type</p>
-                    <span>Front Wheel Drive</span>
-                </li>
-                <!-- <li>
-                    <p>Virsbūves tips</p>
-                    <span>Sedans</span>
-                </li>
-                <li>
-                    <p>Sēdvietas</p>w
-                    <span>5</span>
-                </li> -->
-                <li>
-                    <p>Price</p>
-                    <span>30€ / Day</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="user-box-container">
-            <img :src="require('@/assets/tesla-3.jpeg')" alt="">
-            <h1>Tesla Model 3 Long Range</h1>
-            <ul>
-                <li>
-                    <p>Release Year</p>
-                    <span>2017</span>
-                </li>
-                <li>
-                    <p>Fuel Type</p>
-                    <span>Electric</span>
-                </li>
-                <!-- <li>
-                    <p>Dzinējs</p>
-                    <span>Elektro dzinējs</span>
-                </li> -->
-                <li>
-                    <p>Horse Powers</p>
-                    <span>271hp</span>
-                </li>
-                <li>
-                    <p>0-100km/h</p>
-                    <span>5.4s</span>
-                </li>
-                <li>
-                    <p>Gearbox</p>
-                    <span>Automatic</span>
-                </li>
-                <li>
-                    <p>Drive Type</p>
-                    <span>Rear Wheel Drive</span>
-                </li>
-                <!-- <li>
-                    <p>Virsbūves tips</p>
-                    <span>Sedans</span>
-                </li>
-                <li>
-                    <p>Sēdvietas</p>w
-                    <span>5</span>
-                </li> -->
-                <li>
-                    <p>Price</p>
-                    <span>50€ / Day</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="user-box-container">
-            <img :src="require('@/assets/bmw-3series.jpeg')" alt="">
-            <h1>BMW 320i</h1>
-            <ul>
-                <li>
-                    <p>Release Year</p>
-                    <span>2020</span>
-                </li>
-                <li>
-                    <p>Fuel Type</p>
-                    <span>Petrol</span>
-                </li>
-                <!-- <li>
-                    <p>Dzinējs</p>
-                    <span>Elektro dzinējs</span>
-                </li> -->
-                <li>
-                    <p>Horse Powers</p>
-                    <span>184hp</span>
-                </li>
-                <li>
-                    <p>0-100km/h</p>
-                    <span>7.0s</span>
-                </li>
-                <li>
-                    <p>Gearbox</p>
-                    <span>Automatic</span>
-                </li>
-                <li>
-                    <p>Drive Type</p>
-                    <span>Rear Wheel Drive</span>
-                </li>
-                <!-- <li>
-                    <p>Virsbūves tips</p>
-                    <span>Sedans</span>
-                </li>
-                <li>
-                    <p>Sēdvietas</p>w
-                    <span>5</span>
-                </li> -->
-                <li>
-                    <p>Price</p>
-                    <span>35€ / Day</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="user-box-container">
-            <img :src="require('@/assets/audi-a4.jpeg')" alt="">
-            <h1>Audi a4</h1>
-            <ul>
-                <li>
-                    <p>Release Year</p>
-                    <span>2021</span>
-                </li>
-                <li>
-                    <p>Fuel Type</p>
-                    <span>Diesel</span>
-                </li>
-                <!-- <li>
-                    <p>Dzinējs</p>
-                    <span>Elektro dzinējs</span>
-                </li> -->
-                <li>
-                    <p>Horse Powers</p>
-                    <span>201hp</span>
-                </li>
-                <li>
-                    <p>0-100km/h</p>
-                    <span>6.3s</span>
-                </li>
-                <li>
-                    <p>Gearbox</p>
-                    <span>Automatic</span>
-                </li>
-                <li>
-                    <p>Drive Type</p>
-                    <span>4x4</span>
-                </li>
-                <!-- <li>
-                    <p>Virsbūves tips</p>
-                    <span>Sedans</span>
-                </li>
-                <li>
-                    <p>Sēdvietas</p>w
-                    <span>5</span>
-                </li> -->
-                <li>
-                    <p>Price</p>
-                    <span>40€ / Day</span>
-                </li>
-            </ul>
-        </div>
+  <div class="reviews">
+    <h1>Our Reviews</h1>
+    <div class="user-box">
+      <img :src="require('@/assets/1-whiteWoman.png')" alt="#">
+      <h1 id="author">Name</h1>
+      <p id="info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Corporis molestiae nesciunt id animi quos reiciendis 
+        maiores itaque provident dolorem ratione!
+      </p>
+      <div class="button-container">
+        <button><img :src="require('@/assets/arrow-left.png')" alt=""></button>
+        <button><img :src="require('@/assets/arrow-right.png')" alt=""></button>
+      </div>
     </div>
   </div>
 
   <div class="bottom-container">
-      <img :src="require('@/assets/car3.jpg')" alt="#">
-      <div class="use-container">
-          <h1>Easy to get started!</h1>
-          <ol>
-              <li>Registration, takes about 1 minute!</li>
-              <li>Order a car!</li>
-              <li>Resive it to next day at your home!</li>
-          </ol>
-      </div>
+    <img :src="require('@/assets/car3.jpg')" alt="#">
+    <div class="use-container">
+      <h1>Easy to get started!</h1>
+      <ol>
+        <li>Registration, takes about 1 minute!</li>
+        <li>Order a car!</li>
+        <li>Receive it the next day at your home!</li>
+      </ol>
+    </div>
   </div>
 </template>
 
 <script>
-  export default {
-      name: 'HomeView'
-  };
+export default {
+  name: 'HomeView',
+  data() {
+    return {
+      userChoices: [
+        { id: 1, title: "Volkswagen Polo", price: "14€ / Day", photo: "vw-polo.jpg" },
+        { id: 2, title: "Toyota rav4", price: "40€ / Day", photo: "toyota-rav4.jpeg" },
+        {id: 3, title: "Volkswagen Arteon", price: "32€ / Day", photo: "vw-arteon.jpeg"},
+        {id: 4, title: "Tesla Model 3 Long Range", price: "50€ / Day", photo: "tesla-3.jpeg"},
+        {id: 5, title: "BMW 320i", price: "35€ / Day", photo: "bmw-3series.jpeg"},
+        {id: 6, title: "Audi A4", price: "38€ / Day", photo: "audi-a4.jpeg"}
+      ],
+      reviews: [
+        {id: 1, name: "Ktoto chtoto 1", photo: "pohuj 1"},
+        {id: 2, name: "Ktoto chtoto 2", photo: "pohuj 2"},
+        {id: 3, name: "Ktoto chtoto 3", photo: "pohuj 3"},
+        {id: 4, name: "Ktoto chtoto 4", photo: "pohuj 4"}
+      ]
+    }
+  }
+};
 </script>
 
 <style>
@@ -458,23 +222,24 @@
 
   .middle-container-second > img {
     border-radius: 10px;
-    width: 35%;
+    width: 30%;
+    margin: 0 auto;
     opacity: 0.7;
     transition: 0.3s;
   }
 
   .middle-container-second > img:hover {
     opacity: 1;
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
 
   .middle-container-second > .left-container {
     width: 50%;
-    margin-right: 30px;
+    margin-left: 50px;
   }
 
   .middle-container-second > .left-container > h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin: 0;
     transition: 0.3s;
   }
@@ -489,16 +254,16 @@
   }
 
   .user-choices {
-    width: 95%;
+    width: 80%;
     margin: 7% auto;
-    background-color: #e9e9e8;
+    background-color: var(--white-white);
     border-radius: 10px;
-    padding: 0 10px 20px;
+    padding: 0 10px 10px;
   }
 
   .user-choices > h1 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.5rem;
     padding-top: 30px;
     transition: 0.3s;
     cursor: pointer;
@@ -510,17 +275,16 @@
 
   .user-choices > .user-box {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, auto);
     justify-content: center;
   }
 
   .user-choices > .user-box > .user-box-container {
-    margin: 20px 50px;
-    border: 2px solid #000;
+    margin: 20px 20px;
     border-radius: 10px;
     padding: 10px;
     background: rgb(255,255,255);
-    background: linear-gradient(150deg, rgba(255,255,255,1) 0%, rgba(196,196,196,1) 100%);
+    background: linear-gradient(160deg, rgba(255,255,255,1) 20%, rgba(255,217,205,1) 90%);
     transition: 0.3s;
     opacity: 0.9;
   }
@@ -561,6 +325,65 @@
     font-size: 1.2rem;
     margin-left: 20px;
     transition: 0.3s;
+  }
+
+  .reviews {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .reviews > h1 {
+    font-size: 3.5rem;
+    padding-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .reviews > h1:hover {
+    color: var(--skin);
+  }
+
+  .reviews > .user-box {
+    width: 70%;
+    margin: 0 auto;
+    background: rgb(255,255,255);
+    background: linear-gradient(160deg, rgba(255,255,255,1) 20%, rgba(255,217,205,1) 90%);
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  .reviews > .user-box >  img {
+    width: 30%;
+    margin: 30px 0;
+  }
+
+  .reviews > .user-box > h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .reviews > .user-box > p {
+    line-height: 1.8rem;
+    letter-spacing: 1px;
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .reviews > .user-box > .button-container {
+    padding: 20px 0;
+  }
+
+  .reviews > .user-box > .button-container > button{
+    background-color: transparent;
+    border: none;
+    margin: 10px;
+    transition: 0.3s;
+  }
+
+  .reviews > .user-box > .button-container > button:hover {
+    background-color: var(--skin);
+    border-radius: 5px;
   }
 
   .bottom-container {

@@ -5,16 +5,16 @@
             <form action="" method="post">
                 <div class="field">
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email" required>
+                    <input type="text" name="email" id="email" v-bind:value="email" required>
                 </div>
 
                 <div class="field">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" v-bind:value="password" required>
                 </div>
 
                 <div class="field">
-                    <input type="submit" name="submit" value="Log In!" required>
+                    <input type="submit" name="submit" value="Log In!" @click="logIn" required>
                 </div>
 
                 <div class="field form-reg">
@@ -24,6 +24,17 @@
         </div>
     </div>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                email: "",
+                password: "",
+            }
+        }
+    }
+</script>
 
 <style>
 .container {

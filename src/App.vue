@@ -22,6 +22,7 @@ export default {
 :root {
     font-size: calc(0.625rem + 0.4vw);
     --white: #dddcdb;
+    --white-white: #e9e9e8;
     --skin: #F39C7F;
     --black: #0E0E0E;
     --grey: #7a7a7a;

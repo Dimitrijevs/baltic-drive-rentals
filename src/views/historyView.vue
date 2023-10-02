@@ -10,7 +10,6 @@
                     First office opened in Riga! 
                     There were 20 cars available to take them to city trips.
                 </p>
-                <div class="left-container-arrow"></div>
             </div>
         </div>
 
@@ -23,7 +22,6 @@
                     We bought 30 volkswagen's including golf's, 
                     polo's and tuareg's to our dear costumers.
                 </p>
-                <div class="right-container-arrow"></div>
             </div>
         </div>
 
@@ -36,7 +34,6 @@
                     We ordered a new Toyotas's from official dealership 
                     to make our autopark more various.
                 </p>
-                <div class="left-container-arrow"></div>
             </div>
         </div>
 
@@ -49,7 +46,6 @@
                     Americans are coming! Now in Latvia you 
                     can take a Tesla Model 3 for your daily driving.
                 </p>
-                <div class="right-container-arrow"></div>
             </div>
         </div>
 
@@ -62,7 +58,6 @@
                     We opened first office in Vilnius. 
                     Our car now available for Lithuanian citizens.
                 </p>
-                <div class="left-container-arrow"></div>
             </div>
         </div>
 
@@ -75,7 +70,6 @@
                     We opened first office in Tallin. 
                     Our car now available for Estonian citizens.
                 </p>
-                <div class="right-container-arrow"></div>
             </div>
         </div>
 
@@ -124,7 +118,7 @@
 .text-box {
     padding: 20px 30px;
     background: rgb(255,255,255);
-    background: linear-gradient(160deg, rgba(255,255,255,1) 0%, rgba(215,215,215,1) 100%);
+    background: linear-gradient(160deg, rgba(255,255,255,1) 20%, rgba(255,217,205,1) 90%);
     position: relative;
     border-radius: 6px;
     font-size: 1rem;
@@ -178,29 +172,5 @@
 .text-box > small {
     display: inline-block;
     margin-bottom: 15px;
-}
-
-.left-container-arrow {
-    height: 0;
-    width: 0;
-    position: absolute;
-    top: 28px;
-    z-index: 1;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 15px solid var(--skin);
-    right: -15px;
-}
-
-.right-container-arrow {
-    height: 0;
-    width: 0;
-    position: absolute;
-    top: 28px;
-    z-index: 1;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-right: 15px solid var(--skin);
-    left: -15px;
 }
 </style>
