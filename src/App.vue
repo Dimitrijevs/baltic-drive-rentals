@@ -5,7 +5,7 @@
     <AppFooter />
   </div>
 </template>
-<!-- test 123 -->
+
 <script>
 import NavBar from "./components/navBar.vue";
 import AppFooter from "./components/appFooter.vue";
