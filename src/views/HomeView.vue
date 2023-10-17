@@ -69,16 +69,20 @@
   <div class="reviews">
     <h1>Our Reviews</h1>
     <div class="user-box">
-      <img :src="require('@/assets/1-whiteWoman.png')" alt="#">
-      <h1 id="author">Name</h1>
+      <img :src="require('@/assets/1-whiteWoman.png')" alt="#" />
+      <h1 id="author">Author name</h1>
       <p id="info">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Corporis molestiae nesciunt id animi quos reiciendis 
-        maiores itaque provident dolorem ratione!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum obcaecati iusto aperiam officia quasi ratione 
+        facere incidunt dolores maiores sint.
       </p>
       <div class="button-container">
-        <button><img :src="require('@/assets/arrow-left.png')" alt=""></button>
-        <button><img :src="require('@/assets/arrow-right.png')" alt=""></button>
+        <button class="prev-btn">
+          <img :src="require('@/assets/arrow-left.png')" alt="" />
+        </button>
+        <button class="next-btn">
+          <img :src="require('@/assets/arrow-right.png')" alt="" />
+        </button>
       </div>
     </div>
   </div>
@@ -110,12 +114,13 @@ export default {
         {id: 6, title: "Audi A4", price: "38€ / Day", photo: "audi-a4.jpeg"}
       ],
       reviews: [
-        {id: 1, name: "Ktoto chtoto 1", photo: "pohuj 1"},
-        {id: 2, name: "Ktoto chtoto 2", photo: "pohuj 2"},
-        {id: 3, name: "Ktoto chtoto 3", photo: "pohuj 3"},
-        {id: 4, name: "Ktoto chtoto 4", photo: "pohuj 4"}
-      ]
-    }
+        {id: 1, name: "Ktoto chtoto 1", photo: "1-whiteWoman.png"},
+        {id: 2, name: "Ktoto chtoto 2", photo: "2-whiteWoman.png"},
+        {id: 3, name: "Ktoto chtoto 3", photo: "3-blackMan.png"},
+        {id: 4, name: "Ktoto chtoto 4", photo: "4-asianMan.png"}
+      ],
+      currentItem: 0,
+    };
   }
 };
 </script>
