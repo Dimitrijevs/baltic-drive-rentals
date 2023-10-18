@@ -117,18 +117,12 @@
 
 .text-box {
     padding: 20px 30px;
-    background: rgb(255,255,255);
-    background: linear-gradient(160deg, rgba(255,255,255,1) 20%, rgba(255,217,205,1) 90%);
+    background-color: #fff;
     position: relative;
     border-radius: 6px;
     font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
-    opacity: 0.7;
-}
-
-.text-box:hover {
-    opacity: 1;
+    box-shadow: 0px 4px 20px 1px var(--grey);
 }
 
 .container-left-container {

@@ -2,7 +2,7 @@
     <footer>
         <div class="flex-container">
             <div class="question-container">
-                <h1>Have an unussual questions?</h1>
+                <h1>Have a question?</h1>
                 <p>Let's get in touch!</p>
             </div>
             <div class="email-container-image">
