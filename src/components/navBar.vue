@@ -11,7 +11,7 @@
         <li class="nav-item"><router-link to="/log-in">Log in</router-link></li>
       </ul>
     </nav>
-  </template>  
+  </template>
 
 <script>
 export default {

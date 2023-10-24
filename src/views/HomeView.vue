@@ -1,17 +1,17 @@
 <template>
   <div class="top-container">
       <div class="text-container">
-          <h1>Mobility when you need it!</h1>
+          <h1 class="header-style">Mobility when you need it!</h1>
           <p>Only from 14 €/day!</p>
           <a href="https://play.google.com/store/apps/details?id=com.primeleasing.citybee&hl=en&pli=1">Download App!</a>
       </div>
       <div class="image-container">
-          <img :src="require('@/assets/car1.jpg')" alt="#">
+          <img class="img-zoom" :src="require('@/assets/car1.jpg')" alt="#">
       </div>
   </div>
 
   <div class="middle-container">
-      <h1>On average, a private automobile remains unused or parked approximately 95% of the time!</h1>
+      <h1 class="header-style text-center">On average, a private automobile remains unused or parked approximately 95% of the time!</h1>
       <div class="facts-container">
           <div class="fact">
               <h1>Variety of cars</h1>
@@ -40,7 +40,7 @@
 
   <div class="middle-container-second">
     <div class="left-container">
-        <h1>A new approach to mobility!</h1>
+        <h1 class="header-style">A new approach to mobility!</h1>
         <p>
             "Baltic Drive Rentls" aims to create a cleaner and more open city. How? 
             One "Baltic Drive Rentls" car that can be shared can replace up to 12 private cars 
@@ -51,10 +51,10 @@
   </div>
 
   <div class="user-choices">
-    <h1>Popular Choices</h1>
+    <h1 class="header-style">Popular Choices</h1>
     <div class="user-box">
       <div class="user-box-container" v-for="car in userChoices" :key="car.id">
-        <img :src="require(`@/assets/${car.photo}`)" alt="">
+        <router-link to="/car-var"><img :src="require(`@/assets/${car.photo}`)" alt=""></router-link>
         <h1>{{ car.title }}</h1>
         <ul>
           <li>
@@ -67,7 +67,7 @@
   </div>
 
   <div class="reviews">
-    <h1>Our Reviews</h1>
+    <h1 class="header-style">Our Reviews</h1>
     <div class="user-box">
       <img :src="require('@/assets/1-whiteWoman.png')" alt="#" />
       <h1 id="author">Author name</h1>
@@ -90,13 +90,19 @@
   <div class="bottom-container">
     <img :src="require('@/assets/car3.jpg')" alt="#">
     <div class="use-container">
-      <h1>Easy to get started!</h1>
+      <h1 class="header-style">Easy to get started!</h1>
       <ol>
         <li>Registration, takes about 1 minute!</li>
         <li>Order a car!</li>
         <li>Receive it the next day at your home!</li>
       </ol>
     </div>
+  </div>
+
+  <div class="our-location">
+    <h1 class="header-style">Find us!</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34817.1791697989!2d24.073011769531252!3d56.947538599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfd412c0ab11%3A0x3863a19974e33f6f!2sRoyal%20Club!5e0!3m2!1sen!2slv!4v1698131396101!5m2!1sen!2slv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </div>
 </template>
 
@@ -136,10 +142,6 @@ export default {
       margin: auto 0 auto auto;
   }
 
-  .top-container > .text-container > h1 {
-      font-size: 4.5rem;
-  }
-
   .top-container > .text-container > p {
       font-size: 2rem;
       margin-bottom: 70px;
@@ -169,16 +171,6 @@ export default {
   }
 
   .top-container > .image-container > img {
-    transition: 0.3s;
-    opacity: 0.7;
-  }
-
-  .top-container > .image-container > img:hover {
-      opacity: 1;
-      transform: scale(1.02);
-  }
-
-  .top-container > .image-container > img {
       width: 75%;
       border-radius: 20px;
       cursor: pointer;
@@ -187,11 +179,6 @@ export default {
   .middle-container {
       width: 70%;
       margin: 7% auto 0;
-  }
-
-  .middle-container > h1 {
-      font-size: 3rem;
-      text-align: center;
   }
 
   .middle-container > .facts-container {
@@ -243,16 +230,6 @@ export default {
     margin-left: 50px;
   }
 
-  .middle-container-second > .left-container > h1 {
-    font-size: 3.5rem;
-    margin: 0;
-    transition: 0.3s;
-  }
-
-  .middle-container-second > .left-container > h1:hover {
-    color: var(--skin);
-  }
-
   .middle-container-second > .left-container > p {
     line-height: 2rem;
     letter-spacing: 1px;
@@ -268,14 +245,6 @@ export default {
 
   .user-choices > h1 {
     text-align: center;
-    font-size: 3.5rem;
-    padding-top: 30px;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-
-  .user-choices > h1:hover {
-    color: var(--skin);
   }
 
   .user-choices > .user-box {
@@ -319,7 +288,7 @@ export default {
     font-weight: bold;
   }
 
-  .user-choices > .user-box > .user-box-container > img {
+  .user-choices > .user-box > .user-box-container > a img {
     width: 300px;
     margin: 10px 20px 0 20px;
     border-radius: 10px;
@@ -336,17 +305,6 @@ export default {
     width: 70%;
     margin: 0 auto;
     text-align: center;
-  }
-
-  .reviews > h1 {
-    font-size: 3.5rem;
-    padding-top: 20px;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-
-  .reviews > h1:hover {
-    color: var(--skin);
   }
 
   .reviews > .user-box {
@@ -416,17 +374,19 @@ export default {
       margin-left: 30px;
   }
 
-  .bottom-container > .use-container > h1 {
-      font-size: 3rem;
-      transition: 0.3s;
-  }
-
-  .bottom-container > .use-container > h1:hover {
-      color: var(--skin);
-  }
-
   .bottom-container > .use-container > ol > li {
     line-height: 2rem;
     letter-spacing: 1px;
+  }
+
+  .our-location {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .our-location iframe {
+    border-radius: 8px;
+    margin-bottom: 4%;
   }
 </style>

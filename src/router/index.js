@@ -36,6 +36,11 @@ const routes = [
     path: '/register-page',
     name: 'register-page',
     component: () => import( '../views/registerView.vue')
+  },
+  {
+    path: '/car-var',
+    name: 'car-var',
+    component: () => import('../views/carView.vue')
   }
 ]
 

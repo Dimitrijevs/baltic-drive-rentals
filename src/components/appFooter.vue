@@ -33,7 +33,7 @@
         margin: 0;
         text-align: center;
         font-size: 1.5rem;
-        padding-bottom: 30px;
+        padding-bottom: 4px;
         color: var(--white);
     }
 
@@ -49,6 +49,11 @@
         align-items: center;
     }
 
+    footer .flex-container .email-container-image h1,
+    footer .flex-container .question-container h1 {
+        margin: 4px;
+    }
+
     footer > .flex-container > .email-container-image > img {
         margin-right: 20px;
     }
@@ -56,10 +61,12 @@
     footer > .underline {
         width: 70%;
         border: 1px solid var(--skin);
-        margin: 20px auto;
+        margin: 2px auto;
     }
 
-    footer > .flex-container > .question-container > h1, footer > .flex-container > .question-container > p, footer > .flex-container > .email-container-image > .email-container h1, footer > .flex-container > .email-container-image > .email-container p {
+    footer > .flex-container > .question-container > h1, footer > .flex-container > .question-container > p, 
+    footer > .flex-container > .email-container-image > .email-container h1, 
+    footer > .flex-container > .email-container-image > .email-container p {
         color: var(--white);
     }
 </style>
