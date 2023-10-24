@@ -24,7 +24,6 @@ export default {
         display: flex;
         width: 100%;
         justify-content: space-between;
-        padding: 0 2%;
         background-color: var(--black);
         box-shadow: 0px 6px 16px 0px var(--grey);
         position: fixed;
@@ -37,8 +36,8 @@ export default {
     }
 
     .nav-bar > a > img {
-        width: 220px;
-        margin-left: 12%;
+        height: 80px;
+        margin-left: 16%;
     }
 
     .nav-bar > ul {
@@ -55,12 +54,26 @@ export default {
 
     .nav-bar > ul > li > a{
         text-decoration: none;
+        position: relative;
         color: #fff;
         padding: 4px 8px;
     }
 
-    .nav-bar > ul > li > a:hover{
-        text-decoration: underline;
+    .nav-bar > ul > li > a::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-bar > ul > li > a:hover::before {
+      transform: scaleX(1);
     }
 
     .nav-bar > .last-list {

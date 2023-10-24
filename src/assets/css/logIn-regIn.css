@@ -1,0 +1,46 @@
+.container {
+    width: 30%;
+    margin: 4% auto 8%;
+    border-radius: 8px;
+}
+
+.container > .box > form > .field {
+    margin: 15px;
+    font-size: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container > .box > form > .field > input {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    margin: 4px 0 24px;
+}
+
+.container > .box > form > .field > input[type=submit] {
+    margin: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: var(--skin);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container > .box > form > .field > input[type=submit]:hover {
+    background-color: #fcd47d;
+}
+
+.container > .box > form > .form-reg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container > .box > form > .form-reg > a {
+    margin-left: 10px;
+    color: var(--skin);
+}

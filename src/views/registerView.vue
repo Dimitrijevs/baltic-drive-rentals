@@ -1,7 +1,7 @@
 <template>
+    <h1 class="header-style text-center top">Registration Form</h1>
     <div class="container">
         <div class="box form-box">
-            <header>Registration Form</header>
             <form action="" method="post">
                 <div class="field input">
                     <label for="username">Username</label>
@@ -37,35 +37,25 @@
 
 <style>
 .container {
-    width: 35%;
-    margin: 10% auto;
-    border-radius: 5px;
-}
-
-.container > .box > header {
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 15px 0;
+    width: 30%;
+    margin: 4% auto 8%;
+    border-radius: 8px;
 }
 
 .container > .box > form > .field {
     margin: 15px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     flex-wrap: wrap;
 }
 
 .container > .box > form > .field > input {
     width: 100%;
-    padding: 8px 24px;
-    display: inline-block;
-    border: 2px solid #ccc;
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
     border-radius: 8px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
+    margin: 4px 0 24px;
 }
 
 .container > .box > form > .field > input[type=submit] {
@@ -73,18 +63,13 @@
     width: 100%;
     font-size: 1.5rem;
     background-color: var(--skin);
-    border: 2px solid var(--skin);
     border: none;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .container > .box > form > .field > input[type=submit]:hover {
-    background-color: var(--white);
-}
-
-.container > .box > form > .form-reg {
-    text-align: center;
+    background-color: #fcd47d;
 }
 
 .container > .box > form > .form-reg {

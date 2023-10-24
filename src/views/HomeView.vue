@@ -1,7 +1,9 @@
 <template>
   <div class="top-container">
       <div class="text-container">
+        <div>
           <h1 class="header-style">Mobility when you need it!</h1>
+        </div>
           <p>Only from 14 €/day!</p>
           <a href="https://play.google.com/store/apps/details?id=com.primeleasing.citybee&hl=en&pli=1">Download App!</a>
       </div>
@@ -11,7 +13,9 @@
   </div>
 
   <div class="middle-container">
+    <div>
       <h1 class="header-style text-center">On average, a private automobile remains unused or parked approximately 95% of the time!</h1>
+    </div>
       <div class="facts-container">
           <div class="fact">
               <h1>Variety of cars</h1>
@@ -47,13 +51,13 @@
             that most of the time stand still and fill neighborhoods and streets.
         </p>
     </div>
-    <img :src="require('@/assets/car2.jpg')" alt="">
+    <img class="img-zoom" :src="require('@/assets/car2.jpg')" alt="">
   </div>
 
   <div class="user-choices">
-    <h1 class="header-style">Popular Choices</h1>
+    <h1 class="header-style text-center">Popular Choices</h1>
     <div class="user-box">
-      <div class="user-box-container" v-for="car in userChoices" :key="car.id">
+      <div class="user-box-container img-zoom gradient" v-for="car in userChoices" :key="car.id">
         <router-link to="/car-var"><img :src="require(`@/assets/${car.photo}`)" alt=""></router-link>
         <h1>{{ car.title }}</h1>
         <ul>
@@ -68,8 +72,8 @@
 
   <div class="reviews">
     <h1 class="header-style">Our Reviews</h1>
-    <div class="user-box">
-      <img :src="require('@/assets/1-whiteWoman.png')" alt="#" />
+    <div class="user-box gradient">
+      <img class="img-zoom" :src="require('@/assets/1-whiteWoman.png')" alt="#">
       <h1 id="author">Author name</h1>
       <p id="info">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
@@ -88,7 +92,7 @@
   </div>
 
   <div class="bottom-container">
-    <img :src="require('@/assets/car3.jpg')" alt="#">
+    <img class="img-zoom" :src="require('@/assets/car3.jpg')" alt="#">
     <div class="use-container">
       <h1 class="header-style">Easy to get started!</h1>
       <ol>
@@ -171,8 +175,8 @@ export default {
   }
 
   .top-container > .image-container > img {
-      width: 75%;
-      border-radius: 20px;
+      width: 60%;
+      border-radius: 8px;
       cursor: pointer;
   }
 
@@ -216,13 +220,6 @@ export default {
     border-radius: 10px;
     width: 30%;
     margin: 0 auto;
-    opacity: 0.7;
-    transition: 0.3s;
-  }
-
-  .middle-container-second > img:hover {
-    opacity: 1;
-    transform: scale(1.01);
   }
 
   .middle-container-second > .left-container {
@@ -243,10 +240,6 @@ export default {
     padding: 0 10px 10px;
   }
 
-  .user-choices > h1 {
-    text-align: center;
-  }
-
   .user-choices > .user-box {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -257,15 +250,8 @@ export default {
     margin: 20px 20px;
     border-radius: 10px;
     padding: 10px;
-    background: rgb(255,255,255);
-    background: linear-gradient(160deg, rgba(255,255,255,1) 20%, rgba(255,217,205,1) 90%);
     transition: 0.3s;
     opacity: 0.9;
-  }
-
-  .user-choices > .user-box > .user-box-container:hover {
-    transform: scale(1.02);
-    opacity: 1;
   }
 
   .user-choices > .user-box > .user-box-container > ul {
@@ -309,9 +295,6 @@ export default {
 
   .reviews > .user-box {
     width: 70%;
-    margin: 0 auto;
-    background: rgb(255,255,255);
-    background: linear-gradient(160deg, rgba(255,255,255,1) 20%, rgba(255,217,205,1) 90%);
     margin: 0 auto;
     border-radius: 10px;
   }
@@ -360,14 +343,7 @@ export default {
 
   .bottom-container > img {
       width: 35%;
-      border-radius: 10px;
-      opacity: 0.7;
-      transition: 0.3s;
-  }
-
-  .bottom-container > img:hover {
-      opacity: 1;
-      transform: scale(1.03);
+      border-radius: 8px;
   }
 
   .bottom-container > .use-container {

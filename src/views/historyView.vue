@@ -1,79 +1,80 @@
 <template>
+    <h1 class="header-style text-center top">Our History!</h1>
     <div class="timeline">
-
         <div class="history-container container-left-container">
             <img :src="require('@/assets/google.png')" alt="#">
-            <div class="text-box">
-                <h2>We are open!</h2>
+            <div class="text-box gradient img-zoom">
+                <h2>We're Open for Business!</h2>
                 <small>2015</small>
                 <p>
-                    First office opened in Riga! 
-                    There were 20 cars available to take them to city trips.
+                    Our office in Riga is now up and running, 
+                    with an exciting fleet of 20 cars ready to whisk you away on unforgettable city adventures
                 </p>
             </div>
         </div>
 
         <div class="history-container container-right-container">
             <img :src="require('@/assets/vw-logo.png')" alt="#">
-            <div class="text-box">
-                <h2>We extendet auto park!</h2>
+            <div class="text-box gradient img-zoom">
+                <h2>Revving Up Our Fleet!</h2>
                 <small>2016</small>
                 <p>
-                    We bought 30 volkswagen's including golf's, 
-                    polo's and tuareg's to our dear costumers.
-                </p>
-            </div>
-        </div>
-
-        <div class="history-container container-left-container">
-            <img :src="require('@/assets/toyota.png')" alt="#">
-            <div class="text-box">
-                <h2>Toyotas are coming!</h2>
-                <small>2017</small>
-                <p>
-                    We ordered a new Toyotas's from official dealership 
-                    to make our autopark more various.
-                </p>
-            </div>
-        </div>
-
-        <div class="history-container container-right-container">
-            <img :src="require('@/assets/tesla.png')" alt="#">
-            <div class="text-box">
-                <h2>First electric car!</h2>
-                <small>2018</small>
-                <p>
-                    Americans are coming! Now in Latvia you 
-                    can take a Tesla Model 3 for your daily driving.
+                    We've expanded our auto park with 30 top-notch Volkswagen vehicles, 
+                    featuring the likes of Golf, Polo, and Touareg, all for our valued customers to enjoy
                 </p>
             </div>
         </div>
 
         <div class="history-container container-left-container">
             <img :src="require('@/assets/lit.png')" alt="#">
-            <div class="text-box">
-                <h2>Hello Lithuania!</h2>
+            <div class="text-box gradient img-zoom">
+                <h2>Sveiki, Lietuva!</h2>
+                <small>2017</small>
+                <p>
+                    We proudly opened our very first office in Vilnius, 
+                    extending a warm welcome to Lithuanian citizens and making our cars available for your exploration
+                </p>
+            </div>
+        </div>
+
+        <div class="history-container container-right-container">
+            <img :src="require('@/assets/tesla.png')" alt="#">
+            <div class="text-box gradient img-zoom">
+                <h2>Electrifying News!</h2>
+                <small>2018</small>
+                <p>
+                    The Americans are here! Now, in Latvia, 
+                    you can experience the thrill of driving a Tesla Model 3 for your everyday adventures
+                </p>
+            </div>
+        </div>
+
+        <div class="history-container container-left-container">
+            <img :src="require('@/assets/toyota.png')" alt="#">
+            <div class="text-box gradient img-zoom">
+                <h2>Introducing the Toyota Lineup!</h2>
                 <small>2019</small>
                 <p>
-                    We opened first office in Vilnius. 
-                    Our car now available for Lithuanian citizens.
+                    We've just placed orders with the official dealership to add a diverse range of Toyota vehicles to our fleet, 
+                    ensuring even more variety for our valued customers
                 </p>
             </div>
         </div>
 
         <div class="history-container container-right-container">
             <img :src="require('@/assets/est.png')" alt="#">
-            <div class="text-box">
-                <h2>Hello Estonia!</h2>
+            <div class="text-box gradient img-zoom">
+                <h2>Tere, Eesti!</h2>
                 <small>2020</small>
                 <p>
-                    We opened first office in Tallin. 
-                    Our car now available for Estonian citizens.
+                    Proudly inaugurated our first office in Tallinn, 
+                    bringing our cars within reach of Estonian citizens for an exceptional driving experience
                 </p>
             </div>
         </div>
-
     </div>
+
+    <h1 class="header-style text-center bottom">And our work continues...</h1>
 </template>
 
 <script></script>
@@ -117,12 +118,9 @@
 
 .text-box {
     padding: 20px 30px;
-    background-color: #fff;
     position: relative;
     border-radius: 6px;
-    font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0px 4px 20px 1px var(--grey);
 }
 
 .container-left-container {
@@ -142,7 +140,7 @@
     position: absolute;
     width: 6px;
     height: 100%;
-    background: var(--skin);
+    background: #000;
     top: 0;
     left: 50%;
     margin-left: -3px;

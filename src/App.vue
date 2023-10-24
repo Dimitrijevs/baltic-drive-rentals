@@ -21,9 +21,9 @@ export default {
 <style>
 :root {
     font-size: calc(0.625rem + 0.4vw);
-    --white: #dddcdb;
+    --white: #dcdcdc;
     --white-white: #e9e9e8;
-    --skin: #F39C7F;
+    --skin: #E0BC6C;
     --black: #0E0E0E;
     --grey: #7a7a7a;
 }
@@ -76,6 +76,19 @@ body {
 
 .img-zoom:hover{
   opacity: 1;
-  transform: scale(1.01);
+  transform: scale(1.015);
+}
+
+.gradient {
+  background: rgb(255,255,255);
+  background: linear-gradient(160deg, rgba(255,255,255,1) 15%, rgba(242,212,146,1) 100%);
+}
+
+.top {
+    margin-top: 8%;
+}
+
+.bottom {
+    margin-bottom: 8%;
 }
 </style>
