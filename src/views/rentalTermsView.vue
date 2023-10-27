@@ -1,5 +1,5 @@
 <template>
-    <h1 class="text-center top header-style">Rental Terms and Conditions</h1>
+    <h1 class="text-center top header-style fadeInTop">Rental Terms and Conditions</h1>
     <div class="container">
         <div class="text text-center gradient img-zoom">
             <h3>Rental Agreement</h3>
@@ -53,7 +53,7 @@
         width: 70%;
         padding: 30px;
         border-radius: 8px;
-        line-height: 1.6rem;
+        line-height: 1.4rem;
         letter-spacing: 1.2px;
     }
 

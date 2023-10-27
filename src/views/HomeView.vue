@@ -1,6 +1,6 @@
 <template>
   <div class="top-container">
-      <div class="text-container">
+      <div class="text-container fadeInTop">
         <div>
           <h1 class="header-style">Mobility when you need it!</h1>
         </div>
@@ -8,7 +8,7 @@
           <a href="https://play.google.com/store/apps/details?id=com.primeleasing.citybee&hl=en&pli=1">Download App!</a>
       </div>
       <div class="image-container">
-          <img class="img-zoom" :src="require('@/assets/car1.jpg')" alt="#">
+          <img class="img-zoom fadeInRight" :src="require('@/assets/car1.jpg')" alt="#">
       </div>
   </div>
 
@@ -51,7 +51,7 @@
             that most of the time stand still and fill neighborhoods and streets.
         </p>
     </div>
-    <img class="img-zoom" :src="require('@/assets/car2.jpg')" alt="">
+    <img class="img-zoom fadeInRight" :src="require('@/assets/car2.jpg')" alt="">
   </div>
 
   <div class="user-choices">
@@ -73,18 +73,14 @@
   <div class="reviews">
     <h1 class="header-style">Our Reviews</h1>
     <div class="user-box gradient">
-      <img class="img-zoom" :src="require('@/assets/1-whiteWoman.png')" alt="#">
-      <h1 id="author">Author name</h1>
-      <p id="info">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum obcaecati iusto aperiam officia quasi ratione 
-        facere incidunt dolores maiores sint.
-      </p>
+      <img class="img-zoom" :src="require(`@/assets/${reviews[currentItem].photo}`)" alt="#">
+      <h1 id="author">{{ reviews[currentItem].name }}</h1>
+      <p id="info">{{ reviews[currentItem].review }}</p>
       <div class="button-container">
-        <button class="prev-btn">
+        <button class="prev-btn" @click="changeReview('prev')">
           <img :src="require('@/assets/arrow-left.png')" alt="" />
         </button>
-        <button class="next-btn">
+        <button class="next-btn" @click="changeReview('next')">
           <img :src="require('@/assets/arrow-right.png')" alt="" />
         </button>
       </div>
@@ -116,26 +112,55 @@ export default {
   data() {
     return {
       userChoices: [
-        { id: 1, title: "Volkswagen Polo", price: "14€ / Day", photo: "vw-polo.jpg" },
-        { id: 2, title: "Toyota rav4", price: "40€ / Day", photo: "toyota-rav4.jpeg" },
-        {id: 3, title: "Volkswagen Arteon", price: "32€ / Day", photo: "vw-arteon.jpeg"},
-        {id: 4, title: "Tesla Model 3 Long Range", price: "50€ / Day", photo: "tesla-3.jpeg"},
-        {id: 5, title: "BMW 320i", price: "35€ / Day", photo: "bmw-3series.jpeg"},
-        {id: 6, title: "Audi A4", price: "38€ / Day", photo: "audi-a4.jpeg"}
+        { id: 1, title: "Volkswagen Polo", price: "14€ / Day + 0.22€ / KM", photo: "vw-polo.jpg" },
+        { id: 2, title: "Toyota rav4", price: "40€ / Day + 0.34€ / KM", photo: "toyota-rav4.jpeg" },
+        {id: 3, title: "Volkswagen Arteon", price: "32€ / Day + 0.26€ / KM", photo: "vw-arteon.jpeg"},
+        {id: 4, title: "Tesla Model 3 Long Range", price: "50€ / Day + 0.48€ / KM", photo: "tesla-3.jpeg"},
+        {id: 5, title: "BMW 320i", price: "35€ / Day + 0.32€ / KM", photo: "bmw-3series.jpeg"},
+        {id: 6, title: "Audi A4", price: "38€ / Day + 0.42€ / KM", photo: "audi-a4.jpeg"}
       ],
       reviews: [
-        {id: 1, name: "Ktoto chtoto 1", photo: "1-whiteWoman.png"},
-        {id: 2, name: "Ktoto chtoto 2", photo: "2-whiteWoman.png"},
-        {id: 3, name: "Ktoto chtoto 3", photo: "3-blackMan.png"},
-        {id: 4, name: "Ktoto chtoto 4", photo: "4-asianMan.png"}
+        {
+          id: 1, 
+          name: "Emily Harrison", 
+          review: "Baltics Rentals exceeded expectations. Their cars were clean, well-maintained, and the rental process was hassle-free. Exceptional service for short-term car rentals, highly recommended.", 
+          photo: "1-whiteWoman.png"
+        },
+        {
+          id: 2, 
+          name: "Olivia Martinez", 
+          review: "Baltics Rentals provided me with a top-notch car for a weekend getaway. Convenient, friendly, and affordable. I'll definitely choose them for my next trip.", 
+          photo: "2-whiteWoman.png"
+        },
+        {
+          id: 3, 
+          name: "Samuel Anderson", 
+          review: "Using Baltics Rentals for a short-term car rental was seamless. Their vehicles were in excellent condition, and the staff was friendly and efficient. A reliable choice for quick rentals.", 
+          photo: "3-blackMan.png"
+        },
+        {
+          id: 4, 
+          name: "Benjamin Cooper", 
+          review: "I rented a car from Baltics Rentals for a short trip, and it was a fantastic experience. The car was spotless, and the process was quick. I'll use them again for sure.", 
+          photo: "4-asianMan.png"
+        }
       ],
       currentItem: 0,
     };
+  },
+  methods: {
+    changeReview(direction) {
+      if (direction === 'prev') {
+        this.currentItem = (this.currentItem - 1 + this.reviews.length) % this.reviews.length;
+      } else if (direction === 'next') {
+        this.currentItem = (this.currentItem + 1) % this.reviews.length;
+      }
+    }
   }
-};
+}
 </script>
 
-<style>
+<style scoped>
   .top-container {
       display: flex;
       margin-top: 6%;

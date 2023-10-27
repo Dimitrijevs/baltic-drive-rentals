@@ -1,5 +1,5 @@
 <template>
-    <h1 class="header-style text-center top">Our History!</h1>
+    <h1 class="header-style text-center top fadeInTop">Our History!</h1>
     <div class="timeline">
         <div class="history-container container-left-container">
             <img :src="require('@/assets/google.png')" alt="#">
