@@ -1,5 +1,5 @@
 <template>
-    <h1 class="header-style text-center top">Log In Form</h1>
+    <h1 class="header-style text-center top fadeInTop">Log In Form</h1>
     <div class="container">
         <div class="box form-box">
             <form action="" method="post">

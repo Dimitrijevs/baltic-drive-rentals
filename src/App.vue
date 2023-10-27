@@ -93,7 +93,7 @@ body {
 }
 
 .fadeInRight {
-    animation: fadeInRight 2s ease;
+    animation: fadeInRight 1.2s ease;
 }
 
 @keyframes fadeInRight {
@@ -108,7 +108,7 @@ body {
 }
 
 .fadeInTop {
-    animation: fadeInTop 2s ease;
+    animation: fadeInTop 1.2s ease;
 }
 
 @keyframes fadeInTop {

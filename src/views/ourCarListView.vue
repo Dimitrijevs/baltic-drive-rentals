@@ -1,5 +1,5 @@
 <template>
-    <h1 class="text-center header-style top">Our Car List</h1>
+    <h1 class="text-center header-style top fadeInTop">Our Car List</h1>
     <div class="box">
         <div class="left">
             <div class="filter">
@@ -28,23 +28,18 @@
                     <h3>Body Type</h3>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Hetchback</label>
-                        
                     </div>
                     <div class="one-line">
                         <label for=""><input type="checkbox">SUV</label>
-                        
                     </div>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Sedan</label>
-                        
                     </div>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Estate</label>
-                        
                     </div>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Cabriolet</label>
-                        
                     </div>
                     <hr>
                 </div>
@@ -53,19 +48,15 @@
                     <h3>Fuel Type</h3>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Diesel</label>
-                        
                     </div>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Petrol</label>
-                        
                     </div>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Electric</label>
-                        
                     </div>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Hybrid</label>
-                        
                     </div>
                     <hr>
                 </div>
@@ -74,11 +65,9 @@
                     <h3>Gearbox</h3>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Automatic</label>
-                        
                     </div>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Manual</label>
-                        
                     </div>
                     <hr>
                 </div>
@@ -87,23 +76,18 @@
                     <h3>Price</h3>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Up to 20</label>
-                        
                     </div>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Up to 30</label>
-                        
                     </div>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Up to 50</label>
-                        
                     </div>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Up to 70</label>
-                        
                     </div>
                     <div class="one-line">
                         <label for=""><input type="checkbox">Up to 100</label>
-                        
                     </div>
                     <hr>
                 </div>
@@ -142,7 +126,7 @@ export default {
         }
     },
     mounted() {
-        let boxes = document.querySelectorAll(".box .right .filter .one-select input[type=checkbox]");
+        let boxes = document.querySelectorAll(".one-select input[type=checkbox]");
         boxes.forEach(b => b.addEventListener("change", tick));
         function tick(e) {
         let state = e.target.checked;
@@ -159,6 +143,4 @@ export default {
     margin: 0 auto;
     display: flex;
 }
-
-
 </style>

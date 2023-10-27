@@ -51,7 +51,7 @@
             that most of the time stand still and fill neighborhoods and streets.
         </p>
     </div>
-    <img class="img-zoom fadeInRight" :src="require('@/assets/car2.jpg')" alt="">
+    <img class="img-zoom" :src="require('@/assets/car2.jpg')" alt="">
   </div>
 
   <div class="user-choices">
@@ -156,7 +156,7 @@ export default {
         this.currentItem = (this.currentItem + 1) % this.reviews.length;
       }
     }
-  }
+  },
 }
 </script>
 
