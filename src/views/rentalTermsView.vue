@@ -2,6 +2,7 @@
     <h1 class="text-center top header-style fadeInTop">Rental Terms and Conditions</h1>
     <div class="container">
         <div class="text text-center gradient img-zoom">
+            <img :src="require('@/assets/icons/agree.png')" alt="">
             <h3>Rental Agreement</h3>
             <p>
                 This Agreement constitutes a binding contract between SIA "Baltic Drive Rentals", 
@@ -11,6 +12,7 @@
         </div>
 
         <div class="text text-center gradient img-zoom">
+            <img :src="require('@/assets/icons/car-rent.png')" alt="">
             <h3>Vehicle Rental</h3>
             <p>
                 The Company will provide the Renter with the selected vehicle model or a similar one at its discretion.
@@ -20,6 +22,7 @@
         </div>
 
         <div class="text text-center gradient img-zoom">
+            <img :src="require('@/assets/icons/requirements.png')" alt="">
             <h3>Renter Requirements</h3>
             <p>
                 The Renter must meet the minimum age requirement and possess a valid driver's license in their name.
@@ -28,6 +31,7 @@
         </div>
 
         <div class="text text-center gradient img-zoom">
+            <img :src="require('@/assets/icons/payment.png')" alt="">
             <h3>Payment</h3>
             <p>
                 The Renter agrees to pay all rental fees, including rental rate, taxes, fuel charges, and specified additional fees.
@@ -60,5 +64,6 @@
     .container .text h3 {
         margin: 5px 0;
         font-size: 1.6rem;
+        width: auto;
     }
 </style>

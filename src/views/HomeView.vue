@@ -5,10 +5,10 @@
           <h1 class="header-style">Mobility when you need it!</h1>
         </div>
           <p>Only from 14 €/day!</p>
-          <a href="https://play.google.com/store/apps/details?id=com.primeleasing.citybee&hl=en&pli=1">Download App!</a>
+          <a class="radius-8px" href="https://play.google.com/store/apps/details?id=com.primeleasing.citybee&hl=en&pli=1">Download App!</a>
       </div>
       <div class="image-container">
-          <img class="img-zoom fadeInRight" :src="require('@/assets/car1.jpg')" alt="#">
+          <img class="img-zoom fadeInRight radius-8px" :src="require('@/assets/car1.jpg')" alt="#">
       </div>
   </div>
 
@@ -51,14 +51,14 @@
             that most of the time stand still and fill neighborhoods and streets.
         </p>
     </div>
-    <img class="img-zoom" :src="require('@/assets/car2.jpg')" alt="">
+    <img class="img-zoom radius-8px" :src="require('@/assets/car2.jpg')" alt="">
   </div>
 
-  <div class="user-choices">
+  <div class="user-choices radius-8px">
     <h1 class="header-style text-center">Popular Choices</h1>
     <div class="user-box">
-      <div class="user-box-container img-zoom gradient" v-for="car in userChoices" :key="car.id">
-        <router-link to="/car-var"><img :src="require(`@/assets/${car.photo}`)" alt=""></router-link>
+      <div class="user-box-container img-zoom gradient radius-8px" v-for="car in userChoices" :key="car.id">
+        <router-link to="/car-var"><img class="radius-8px" :src="require(`@/assets/${car.photo}`)" alt=""></router-link>
         <h1>{{ car.title }}</h1>
         <ul>
           <li>
@@ -72,15 +72,15 @@
 
   <div class="reviews">
     <h1 class="header-style">Our Reviews</h1>
-    <div class="user-box gradient">
+    <div class="user-box gradient radius-8px">
       <img class="img-zoom" :src="require(`@/assets/people/${reviews[currentItem].photo}`)" alt="#">
       <h1 id="author">{{ reviews[currentItem].name }}</h1>
       <p id="info">{{ reviews[currentItem].review }}</p>
       <div class="button-container">
-        <button class="prev-btn" @click="changeReview('prev')">
+        <button class="prev-btn radius-8px" @click="changeReview('prev')">
           <img :src="require('@/assets/arrow-left.png')" alt="" />
         </button>
-        <button class="next-btn" @click="changeReview('next')">
+        <button class="next-btn radius-8px" @click="changeReview('next')">
           <img :src="require('@/assets/arrow-right.png')" alt="" />
         </button>
       </div>
@@ -88,7 +88,7 @@
   </div>
 
   <div class="bottom-container">
-    <img class="img-zoom" :src="require('@/assets/car3.jpg')" alt="#">
+    <img class="img-zoom radius-8px" :src="require('@/assets/car3.jpg')" alt="#">
     <div class="use-container">
       <h1 class="header-style">Easy to get started!</h1>
       <ol>
@@ -101,7 +101,7 @@
 
   <div class="our-location">
     <h1 class="header-style">Find us!</h1>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34817.1791697989!2d24.073011769531252!3d56.947538599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfd412c0ab11%3A0x3863a19974e33f6f!2sRoyal%20Club!5e0!3m2!1sen!2slv!4v1698131396101!5m2!1sen!2slv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    <iframe class="radius-8px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34817.1791697989!2d24.073011769531252!3d56.947538599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfd412c0ab11%3A0x3863a19974e33f6f!2sRoyal%20Club!5e0!3m2!1sen!2slv!4v1698131396101!5m2!1sen!2slv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </div>
 </template>
@@ -180,7 +180,6 @@ export default {
       font-size: 2rem;
       border: 2px solid var(--grey);
       padding: 10px 26px;
-      border-radius: 20px;
       opacity: 0.6;
       text-decoration: none;
       transition: 0.3s;
@@ -201,7 +200,6 @@ export default {
 
   .top-container > .image-container > img {
       width: 60%;
-      border-radius: 8px;
       cursor: pointer;
   }
 
@@ -242,7 +240,6 @@ export default {
   }
 
   .middle-container-second > img {
-    border-radius: 10px;
     width: 30%;
     margin: 0 auto;
   }
@@ -261,7 +258,6 @@ export default {
     width: 80%;
     margin: 7% auto;
     background-color: var(--white-white);
-    border-radius: 10px;
     padding: 0 10px 10px;
   }
 
@@ -273,7 +269,6 @@ export default {
 
   .user-choices > .user-box > .user-box-container {
     margin: 20px;
-    border-radius: 8px;
     padding: 10px;
   }
 
@@ -297,10 +292,9 @@ export default {
     font-weight: bold;
   }
 
-  .user-choices > .user-box > .user-box-container > a img {
+  .user-choices .user-box .user-box-container a img {
     width: 300px;
     margin: 10px 20px 0;
-    border-radius: 10px;
     cursor: pointer;
   }
 
@@ -318,7 +312,6 @@ export default {
   .reviews > .user-box {
     width: 70%;
     margin: 0 auto;
-    border-radius: 10px;
   }
 
   .reviews > .user-box >  img {
@@ -351,7 +344,6 @@ export default {
 
   .reviews > .user-box > .button-container > button:hover {
     background-color: var(--skin);
-    border-radius: 5px;
   }
 
   .bottom-container {
@@ -365,7 +357,6 @@ export default {
 
   .bottom-container > img {
       width: 35%;
-      border-radius: 8px;
   }
 
   .bottom-container > .use-container {
@@ -384,7 +375,6 @@ export default {
   }
 
   .our-location iframe {
-    border-radius: 8px;
     margin-bottom: 4%;
   }
 </style>
