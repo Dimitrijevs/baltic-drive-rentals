@@ -73,7 +73,7 @@
   <div class="reviews">
     <h1 class="header-style">Our Reviews</h1>
     <div class="user-box gradient">
-      <img class="img-zoom" :src="require(`@/assets/${reviews[currentItem].photo}`)" alt="#">
+      <img class="img-zoom" :src="require(`@/assets/people/${reviews[currentItem].photo}`)" alt="#">
       <h1 id="author">{{ reviews[currentItem].name }}</h1>
       <p id="info">{{ reviews[currentItem].review }}</p>
       <div class="button-container">
@@ -112,7 +112,7 @@ export default {
   data() {
     return {
       userChoices: [
-        { id: 1, title: "Volkswagen Polo", price: "14€ / Day + 0.22€ / KM", photo: "vw-polo.jpg" },
+        {id: 1, title: "Volkswagen Polo", price: "14€ / Day + 0.22€ / KM", photo: "cars/vw-polo-1/vw-polo-1.png" },
         { id: 2, title: "Toyota rav4", price: "40€ / Day + 0.34€ / KM", photo: "toyota-rav4.jpeg" },
         {id: 3, title: "Volkswagen Arteon", price: "32€ / Day + 0.26€ / KM", photo: "vw-arteon.jpeg"},
         {id: 4, title: "Tesla Model 3 Long Range", price: "50€ / Day + 0.48€ / KM", photo: "tesla-3.jpeg"},
@@ -272,11 +272,9 @@ export default {
   }
 
   .user-choices > .user-box > .user-box-container {
-    margin: 20px 20px;
-    border-radius: 10px;
+    margin: 20px;
+    border-radius: 8px;
     padding: 10px;
-    transition: 0.3s;
-    opacity: 0.9;
   }
 
   .user-choices > .user-box > .user-box-container > ul {
@@ -301,7 +299,7 @@ export default {
 
   .user-choices > .user-box > .user-box-container > a img {
     width: 300px;
-    margin: 10px 20px 0 20px;
+    margin: 10px 20px 0;
     border-radius: 10px;
     cursor: pointer;
   }
@@ -309,7 +307,6 @@ export default {
   .user-choices > .user-box > .user-box-container > h1 {
     font-size: 1.2rem;
     margin-left: 20px;
-    transition: 0.3s;
   }
 
   .reviews {

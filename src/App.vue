@@ -28,10 +28,6 @@ export default {
     --grey: #7a7a7a;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 ::-webkit-scrollbar {
     display: none;
 }
@@ -90,6 +86,10 @@ body {
 
 .bottom {
     margin-bottom: 8%;
+}
+
+.radius-8px {
+  border-radius: 8px;
 }
 
 .fadeInRight {

@@ -2,13 +2,13 @@
     <nav class="nav-bar">
       <router-link to="/"><img :src="require('@/assets/logo.png')" alt="Error"></router-link>
       <ul>
-        <li class="nav-item"><router-link to="/history-page">History Page</router-link></li>
-        <li class="nav-item"><router-link to="/rental-terms">Rental Terms</router-link></li>
-        <li id="special"><router-link to="/our-car-list">Our Car List</router-link></li>
+        <li class="nav-item"> <img :src="require('@/assets/icons/history.png')" alt=""> <router-link to="/history-page">History Page</router-link></li>
+        <li class="nav-item"> <img :src="require('@/assets/icons/rules.png')" alt=""> <router-link to="/rental-terms">Rental Terms</router-link></li>
+        <li id="special"> <img :src="require('@/assets/icons/car.png')" alt=""> <router-link to="/our-car-list">Our Car List</router-link></li>
       </ul>
       <ul class="last-list">
-        <li class="nav-item"><router-link to="/profile-page">Profile Page</router-link></li>
-        <li class="nav-item"><router-link to="/log-in">Log in</router-link></li>
+        <li class="nav-item"> <img :src="require('@/assets/icons/user.png')" alt=""> <router-link to="/profile-page">Profile Page</router-link></li>
+        <li class="nav-item"> <img :src="require('@/assets/icons/log-in.png')" alt=""> <router-link to="/log-in">Log in</router-link></li>
       </ul>
     </nav>
   </template>
@@ -47,9 +47,14 @@ export default {
         flex-wrap: wrap;
     }
 
-    .nav-bar > ul > li{
+    .nav-bar ul li{
         font-size: 1.2rem;
         padding: 10px;
+        display: flex;
+    }
+
+    .nav-bar ul li img {
+      height: 28px;
     }
 
     .nav-bar > ul > li > a{
