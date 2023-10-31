@@ -99,7 +99,7 @@
     </div>
   </div>
 
-  <div class="our-location">
+  <div class="our-location radius-8px">
     <h1 class="header-style">Find us!</h1>
     <iframe class="radius-8px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34817.1791697989!2d24.073011769531252!3d56.947538599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfd412c0ab11%3A0x3863a19974e33f6f!2sRoyal%20Club!5e0!3m2!1sen!2slv!4v1698131396101!5m2!1sen!2slv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
@@ -369,8 +369,8 @@ export default {
   }
 
   .our-location {
-    width: 90%;
-    margin: 0 auto;
+    width: 50%;
+    margin: 8% auto;
     text-align: center;
   }
 
