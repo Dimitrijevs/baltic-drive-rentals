@@ -30,13 +30,25 @@
         </div>
 
         <div class="bottom">
-            <img class="radius-8px" :src="require('@/assets/cars/vw-polo-1/vw-polo-1.png')" alt="main-img">
-            <button class="prev-btn btn img-zoom radius-8px">
-                <img :src="require('@/assets/arrow-left.png')" alt="" />
-            </button>
-            <button class="next-btn btn img-zoom radius-8px">
-                <img :src="require('@/assets/arrow-right.png')" alt="" />
-            </button>
+            <div class="carousel" data-carousel>
+                <button class="prev-btn carousel-btn img-zoom radius-8px" data-carousel-button="prev">&lt;</button>
+                <button class="next-btn carousel-btn img-zoom radius-8px" data-carousel-button="next">&gt;</button>
+                <ul data-slides>
+                    <li class="slide" v-for="photo in polo1Photos" :key="photo.id">
+                        <img class="radius-8px" :src="require(`@/assets/cars/${photo.text}`)" alt="main-img">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="description radius-8px text-center">
+            <p>
+                The VW Polo 1.2 manual is a compact dynamo, boasting a zippy 1.2-liter 
+                engine and precise manual transmission for an exhilarating driving experience. 
+                With its stylish design, comfortable interior, and impressive fuel efficiency, 
+                this Polo is the perfect blend of sporty flair and practicality, 
+                making it a standout choice in its class.
+            </p>
         </div>
     </div>
 
@@ -46,22 +58,22 @@
         <div class="bottom-left">
             <div class="flex">
                 <label for="">Price per Day</label>
-                <input v-model="pricePerDay" type="number" placeholder="€" min="0" max="100">
+                <input v-model="pricePerDay" type="number" placeholder="14-100€">
             </div>
 
             <div class="flex">
                 <label for="">Amounth of Days</label>
-                <input v-model="amounthOfDays" type="number" placeholder="Days" min="0" max="365">
+                <input v-model="amounthOfDays" type="number" placeholder="1-365">
             </div>
 
             <div class="flex">
                 <label for="">Price per Kilometer</label>
-                <input v-model="pricePerKm" type="number" placeholder="KM" min="0" max="1" step="0.01">
+                <input v-model="pricePerKm" type="number" placeholder="KM" step="0.02">
             </div>
 
             <div class="flex">
                 <label for="">Kilometers amounth</label>
-                <input v-model="kmAmounth" type="number" placeholder="KM" min="0" max="50000">
+                <input v-model="kmAmounth" type="number" placeholder="KM">
             </div>
         </div>
 
@@ -76,21 +88,73 @@
 export default {
     data() {
         return {
-            pricePerDay: 0,
-            amounthOfDays: 0,
-            pricePerKm: 0,
-            kmAmounth: 0,
-            maxValue: 96500
+            pricePerDay: null,  
+            amounthOfDays: null,
+            pricePerKm: null,
+            kmAmounth: null,
+            maxValue: 96500,
+            polo1Photos: [
+                {id: 1, text:  "vw-polo-1/vw-polo-1.png"},
+                {id: 2, text:  "vw-polo-1/vw-polo-2.png"},
+                {id: 3, text:  "vw-polo-1/vw-polo-3.png"},
+                {id: 4, text:  "vw-polo-1/vw-polo-4.png"},
+                {id: 5, text:  "vw-polo-1/vw-polo-5.png"},
+                {id: 6, text:  "vw-polo-1/vw-polo-6.png"},
+                {id: 7, text:  "vw-polo-1/vw-polo-7.png"},
+                {id: 8, text:  "vw-polo-1/vw-polo-8.png"},
+            ]
         };
     },
     computed: {
-    totalPrice() {
-      return Math.round((this.pricePerDay * this.amounthOfDays + this.pricePerKm * this.kmAmounth) * 100) / 100.0;
+        totalPrice() {
+            if(this.pricePerDay < 0) this.pricePerDay = 0;
+            else if(this.pricePerDay > 100) this.pricePerDay = 100;
+
+            if(this.amounthOfDays < 0) this.amounthOfDays = 0;
+            else if(this.amounthOfDays > 365) this.amounthOfDays = 365;
+
+            if(this.pricePerKm < 0.2) this.pricePerKm = 0.2;
+            else if(this.pricePerKm > 1) this.pricePerKm = 1;
+
+            if(this.kmAmounth < 0) this.kmAmounth = 0;
+            else if(this.kmAmounth > 50000) this.kmAmounth = 50000;
+        return Math.round((this.pricePerDay * this.amounthOfDays + this.pricePerKm * this.kmAmounth) * 100) / 100.0;
+        },
+        formattedTotalPrice() {
+        return this.totalPrice <= this.maxValue ? this.totalPrice : this.maxValue;
+        },
     },
-    formattedTotalPrice() {
-      return this.totalPrice <= this.maxValue ? this.totalPrice : this.maxValue;
+    mounted() {
+        this.attachButtonListeners();
     },
-  },
+    methods: {
+        getImageSource(text) {
+            return require(`@/assets/cars/${text}`);
+        },
+        attachButtonListeners() {
+            const slides = document.querySelectorAll(".main-container .bottom .slide");
+            if (slides.length > 0) {
+                slides[0].setAttribute("data-active", "true");
+            }
+
+            const buttons = document.querySelectorAll("[data-carousel-button]");
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+                    const carousel = button.closest("[data-carousel]");
+                    const slides = carousel.querySelector("[data-slides]");
+
+                    const activeSlide = slides.querySelector("[data-active]");
+                    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+                    if (newIndex < 0) newIndex = slides.children.length - 1;
+                    if (newIndex >= slides.children.length) newIndex = 0;
+
+                    activeSlide.removeAttribute("data-active");
+                    slides.children[newIndex].setAttribute("data-active", true);
+                });
+            });
+        }
+    }
 };
 </script>
 
@@ -136,30 +200,58 @@ export default {
 }
 
 .main-container .bottom {
-    position: relative;
     width: 72%;
+    height: 70vh;
     margin: 0 auto;
 }
 
-.main-container .bottom .btn {
-    border: none;
+.main-container .bottom .carousel ul  {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container .bottom .carousel ul .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.main-container .bottom .carousel ul .slide[data-active] {
+    opacity: 1;
+    top: 36%;
+}
+
+.main-container .bottom .carousel .carousel-btn {
+    position: absolute;
+    top: 66%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    cursor: pointer;
+    color: #fff;
     background-color: #000;
+    border: none;
+    font-size: 3rem;
 }
 
 .main-container .bottom .prev-btn {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    left: 24%;
 }
 
 .main-container .bottom .next-btn {
-    position: absolute;
-    top: 50%;
-    left: 90%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    left: 76%;
+}
+
+.main-container .description {
+    background-color: var(--white-white);
+    padding: 30px;
+    width: 60%;
+    margin: 2% auto 8%;
+}
+
+.main-container .description p {
+    line-height: 1.8rem;
+    letter-spacing: 1px;
 }
 
 .bottom-bottom {
