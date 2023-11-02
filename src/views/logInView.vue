@@ -37,10 +37,6 @@
 </script>
 
 <style>
-.top {
-    margin-top: 10%;
-}
-
 .container {
     width: 30%;
     margin: 4% auto 8%;

@@ -1,17 +1,17 @@
 <template>
     <div class="profile">
         <div class="profileImg-navBar text-center radius-8px">
-            <img :src="require('@/assets/people/1-whiteWoman.png')" alt="">
+            <img :src="require('@/assets/people/1-whiteWoman.png')" alt="" class="img-zoom">
             <h3>Emily Harrison</h3>
             <ul>
-                <li>Home</li>
-                <li>Change Password</li>
-                <li>Sign Out</li>
+                <li><router-link to="/" class="a-link">Home</router-link></li>
+                <li><router-link to="/change-password" class="a-link">Change Password</router-link></li>
+                <li><router-link to="/" class="a-link">Sign Out</router-link></li>
             </ul>
         </div>
         <div class="right-info">
             <div class="about radius-8px">
-                <h3>About</h3>
+                <h3 class="text-center">About</h3>
                 <ul>
                     <li>
                         <p>Full Name</p>
@@ -35,27 +35,27 @@
                 </ul>
             </div>
             <div class="rent-history radius-8px">
-                <h3>Rent History</h3>
+                <h3 class="text-center">Rent History</h3>
                 <ul class="rents">
                     <li class="rent">
                         <p>Car Name</p>
                         <p>Total Days</p>
                         <p>Total KM</p>
-                        <p>Total Price</p>
+                        <p class="radius-8px">Total Price</p>
                     </li>
                     <hr>
                     <li class="rent">
                         <p>Car Name</p>
                         <p>Total Days</p>
                         <p>Total KM</p>
-                        <p>Total Price</p>
+                        <p class="radius-8px">Total Price</p>
                     </li>
                     <hr>
                     <li class="rent">
                         <p>Car Name</p>
                         <p>Total Days</p>
                         <p>Total KM</p>
-                        <p>Total Price</p>
+                        <p class="radius-8px">Total Price</p>
                     </li>
                 </ul>
             </div>
@@ -67,11 +67,24 @@
 
 </script>
 
-<style>
+<style scoped> 
+h3 {
+    font-size: 1.8rem;
+}
 .profile {
     display: flex;
     width: 70%;
     margin: 8% auto;
+}
+
+.profile .right-info {
+    width: 100%;
+}
+
+.profile .right-info .rent-history .rents .rent p:nth-child(4) {
+    background-color: var(--black);
+    color: var(--skin);
+    padding: 6px 8px;
 }
 
 .profile .profileImg-navBar,
@@ -93,8 +106,21 @@
     list-style: none;
 }
 
+.profile .profileImg-navBar ul {
+    margin-top: 80%;
+}
+
 .profile .profileImg-navBar ul li {
     margin: 12px;
+}
+
+.profile .profileImg-navBar ul li a {
+    position: relative;
+    text-decoration-color: var(--white-white);
+}
+
+.a-link::before {
+    background-color: var(--black);
 }
 
 .profile .profileImg-navBar img {
@@ -104,12 +130,14 @@
 .profile .right-info .about ul li,
 .profile .right-info .rent-history ul li {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 .profile .right-info .about ul li p, 
 .profile .right-info .rent-history ul li p{
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 .profile .right-info .rent-history {

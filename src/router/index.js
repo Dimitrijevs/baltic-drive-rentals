@@ -41,6 +41,11 @@ const routes = [
     path: '/car-var',
     name: 'car-var',
     component: () => import('../views/carView.vue')
+  },
+  {
+    path: '/change-password',
+    name: 'change-password',
+    component: () => import('../views/changePasswordView.vue')
   }
 ]
 

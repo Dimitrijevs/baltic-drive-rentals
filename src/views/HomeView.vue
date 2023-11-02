@@ -12,7 +12,7 @@
       </div>
   </div>
 
-  <div class="middle-container">
+  <div class="middle-container radius-8px">
     <div>
       <h1 class="header-style text-center">On average, a private automobile remains unused or parked approximately 95% of the time!</h1>
     </div>
@@ -42,7 +42,7 @@
       </div>
   </div>
 
-  <div class="middle-container-second">
+  <div class="middle-container-second radius-8px">
     <div class="left-container">
         <h1 class="header-style">A new approach to mobility!</h1>
         <p>
@@ -77,17 +77,13 @@
       <h1 id="author">{{ reviews[currentItem].name }}</h1>
       <p id="info">{{ reviews[currentItem].review }}</p>
       <div class="button-container">
-        <button class="prev-btn radius-8px" @click="changeReview('prev')">
-          <img :src="require('@/assets/arrow-left.png')" alt="" />
-        </button>
-        <button class="next-btn radius-8px" @click="changeReview('next')">
-          <img :src="require('@/assets/arrow-right.png')" alt="" />
-        </button>
+        <button class="prev-btn radius-8px" @click="changeReview('prev')">&lt;</button>
+        <button class="next-btn radius-8px" @click="changeReview('next')">&gt;</button>
       </div>
     </div>
   </div>
 
-  <div class="bottom-container">
+  <div class="bottom-container radius-8px">
     <img class="img-zoom radius-8px" :src="require('@/assets/car3.jpg')" alt="#">
     <div class="use-container">
       <h1 class="header-style">Easy to get started!</h1>
@@ -161,6 +157,20 @@ export default {
 </script>
 
 <style scoped>
+  .fadeInRight {
+      animation: fadeInRight 1.2s ease;
+  }
+
+  @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+  }
   .top-container {
       display: flex;
       margin-top: 6%;
@@ -206,6 +216,9 @@ export default {
   .middle-container {
       width: 70%;
       margin: 7% auto 0;
+      background: rgb(220,220,220);
+      background: linear-gradient(90deg, rgba(220,220,220,1) 30%, rgba(255,229,172,1) 100%);
+      padding: 3rem;
   }
 
   .middle-container > .facts-container {
@@ -236,7 +249,9 @@ export default {
     display: flex;
     align-items: center;
     margin: 7% auto;
-    width: 70%;
+    width: 80%;
+    background-color: var(--white-white);
+    padding: 3rem 0;
   }
 
   .middle-container-second > img {
@@ -255,7 +270,7 @@ export default {
   }
 
   .user-choices {
-    width: 80%;
+    width: 79%;
     margin: 7% auto;
     background-color: var(--white-white);
     padding: 0 10px 10px;
@@ -341,6 +356,7 @@ export default {
     border: none;
     margin: 10px;
     transition: 0.3s;
+    font-size: 1.8rem;
   }
 
   .reviews > .user-box > .button-container > button:hover {
@@ -354,6 +370,8 @@ export default {
       align-items: center;
       flex-wrap: wrap;
       margin: 7% auto;
+      background-color: var(--white-white);
+      padding: 3rem 0;
   }
 
   .bottom-container > img {

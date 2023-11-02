@@ -76,8 +76,8 @@ body {
 }
 
 .gradient {
-  background: rgb(255,255,255);
-  background: linear-gradient(160deg, rgba(255,255,255,1) 15%, rgba(242,212,146,1) 100%);
+  background: rgb(233,233,232);
+  background: linear-gradient(180deg, rgba(233,233,232,1) 20%, rgba(255,249,212,1) 100%);
 }
 
 .top {
@@ -90,21 +90,6 @@ body {
 
 .radius-8px {
   border-radius: 8px;
-}
-
-.fadeInRight {
-    animation: fadeInRight 1.2s ease;
-}
-
-@keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
 }
 
 .fadeInTop {
@@ -120,5 +105,22 @@ body {
       opacity: 1;
       transform: translateY(0);
     }
+}
+
+.a-link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.a-link:hover::before {
+  transform: scaleX(1);
 }
 </style>
