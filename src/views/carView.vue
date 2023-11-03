@@ -82,6 +82,10 @@
             <h1>{{ formattedTotalPrice }} €</h1>
         </div>
     </div>
+
+    <div class="order text-center bottom">
+        <button type="submit" class="radius-8px img-zoom"><router-link to="/rented-car" class="a-link">Rent a car!</router-link></button>
+    </div>
 </template>
 
 <script>
@@ -269,7 +273,7 @@ export default {
     margin-top: 12px;
 }
 
-.bottom-bottom .bottom-left {
+.bottom-bottom .bottom-left{
     display: flex;
     background-color: #fff;
     border-radius: 8px;
@@ -302,5 +306,22 @@ export default {
 .bottom-bottom .bottom-left .flex:nth-child(2),
 .bottom-bottom .bottom-left .flex:nth-child(3) {
     margin-right: 12px;
+}
+
+.order button {
+    padding: 28px 52px;
+    border: none;
+    background-color: var(--skin);
+}
+
+.order button a {
+    position: relative;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.order button a::before {
+    background-color: var(--black);
 }
 </style>
