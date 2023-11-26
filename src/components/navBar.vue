@@ -1,17 +1,34 @@
 <template>
-    <nav class="nav-bar">
-      <router-link to="/"><img :src="require('@/assets/logo.png')" alt="Error"></router-link>
-      <ul>
-        <li class="nav-item"> <img :src="require('@/assets/icons/history.png')" alt=""> <router-link to="/history-page" class="a-link">History Page</router-link></li>
-        <li class="nav-item"> <img :src="require('@/assets/icons/rules.png')" alt=""> <router-link to="/rental-terms" class="a-link">Rental Terms</router-link></li>
-        <li id="special"> <img :src="require('@/assets/icons/car.png')" alt=""> <router-link to="/our-car-list" class="a-link">Our Car List</router-link></li>
-      </ul>
-      <ul class="last-list">
-        <li class="nav-item"> <img :src="require('@/assets/icons/user.png')" alt=""> <router-link to="/profile-page" class="a-link">Profile Page</router-link></li>
-        <li class="nav-item"> <img :src="require('@/assets/icons/log-in.png')" alt=""> <router-link to="/log-in" class="a-link">Log in</router-link></li>
-      </ul>
-    </nav>
-  </template>
+  <nav id="nav-bar" class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <router-link to="/" class="navbar-brand text-warning">Baltic Drive Rentals</router-link>
+
+          <div class="collapse navbar-collapse">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item d-flex align-items-center mx-2">
+                    <i class="bi bi-clock-history text-white"></i><router-link to="/history-page" class="nav-link p-1">Our History</router-link>
+                  </li>
+
+                  <li class="nav-item d-flex align-items-center mx-2">
+                    <i class="bi bi-file-earmark-ruled text-white"></i><router-link to="/rental-terms" class="nav-link p-1">Rental Terms</router-link>
+                  </li>
+
+                  <li class="nav-item d-flex align-items-center mx-2">
+                    <i class="bi bi-car-front-fill text-white"></i><router-link to="/our-car-list" class="nav-link p-1">Our Car List</router-link>
+                  </li>
+
+                  <li class="nav-item d-flex align-items-center mx-2">
+                    <i class="bi bi-person-circle text-white ms-5"></i><router-link to="/profile-page" class="nav-link p-1">Profile Page</router-link>
+                  </li>
+
+                  <li class="nav-item d-flex align-items-center mx-2">
+                    <i class="bi bi-box-arrow-in-right text-white"></i><router-link to="/log-in" class="nav-link p-1">Log in</router-link>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+</template>
 
 <script>
 export default {
@@ -20,51 +37,4 @@ export default {
 </script>
 
 <style>
-    .nav-bar {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        background-color: var(--black);
-        box-shadow: 0px 6px 16px 0px var(--grey);
-        position: fixed;
-        z-index: 2;
-        top: 0;
-    }
-
-    .nav-bar > a {
-        display: flex;
-    }
-
-    .nav-bar > a > img {
-        height: 80px;
-        margin-left: 16%;
-    }
-
-    .nav-bar > ul {
-        display: flex;
-        list-style: none;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .nav-bar ul li{
-        font-size: 1.2rem;
-        padding: 10px;
-        display: flex;
-    }
-
-    .nav-bar ul li img {
-      height: 28px;
-    }
-
-    .nav-bar > ul > li > a{
-        text-decoration: none;
-        position: relative;
-        color: #fff;
-        padding: 4px 8px;
-    }
-
-    .nav-bar > .last-list {
-        padding-right: 40px;
-    }
 </style>

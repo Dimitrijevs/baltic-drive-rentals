@@ -1,7 +1,7 @@
 <template>
     <div class="profile">
         <div class="profileImg-navBar text-center radius-8px">
-            <img :src="require('@/assets/people/1-whiteWoman.png')" alt="" class="img-zoom">
+            <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="" class="rounded-circle">
             <h3>Emily Harrison</h3>
             <ul>
                 <li><router-link to="/" class="a-link">Home</router-link></li>

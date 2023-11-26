@@ -36,7 +36,7 @@
     }
 </script>
 
-<style>
+<style scoped>
 .container {
     width: 30%;
     margin: 4% auto 8%;

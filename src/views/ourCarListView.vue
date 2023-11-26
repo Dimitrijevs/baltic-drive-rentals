@@ -1,8 +1,8 @@
 <template>
-    <h1 class="text-center header-style top bottom fadeInTop">Our Car List</h1>
+    <h1 class="header text-center mb-4">Our Car List</h1>
     <div class="box">
         <div class="left">
-            <div class="filter radius-8px">
+            <div class="filter rounded">
                 <div class="filter-box"> 
                     <h3>Brand</h3>
                     <div class="one-line">
@@ -102,18 +102,22 @@
                 <img class="img-zoom" :src="require('@/assets/logos/vw.png')" alt="#">
             </div>
 
-            <div class="cars">
-                <div class="car-box img-zoom gradient" v-for="car in cars" :key="car.id">
-                    <router-link to="/car-var"><img :src="require(`@/assets/${car.photo}`)" alt=""></router-link>
-                    <h1>{{ car.title }}</h1>
-                    <ul>
-                        <li>
-                            <p>Price</p>
-                            <span>{{ car.price }}</span>
-                        </li>
-                    </ul>
+            <section class="bg-light mt-2 rounded">
+                <div class="p-5">
+                    <div class="container text-center">
+                        <div class="row justify-content-between">
+                            <div class="card col-3 p-0 m-3 bg-dark text-light" v-for="car in cars" :key="car.id">
+                            <img :src="require(`@/assets/${car.photo}`)" class="card-img-top img-fluid" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ car.title }}</h5>
+                                <p class="text-secondary">Price: {{ car.price }}</p>
+                                <router-link class="btn btn-primary mb-1" to="/car-var"><i class="bi bi-chevron-right"></i> Read More</router-link>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
 
     </div>
@@ -146,6 +150,10 @@ export default {
 </script>
 
 <style scoped>
+.header {
+    margin-top: 100px;
+}
+
 .box {
     width: 95%;
     margin: 0 auto 8%;

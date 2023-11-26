@@ -46,7 +46,6 @@ body {
     margin: 0;
     padding: 0;
     color: var(--black);
-    background-color: var(--white);
 }
 
 .header-style {
