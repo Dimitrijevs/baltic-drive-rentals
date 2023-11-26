@@ -4,7 +4,7 @@
         <h1 class="mb-5 header text-center">Rental Terms and Conditions</h1>
         <div class="container">
             <div class="row">
-                <div class="card bg-dark text-light mb-4">
+                <div class="card bg-dark text-light mb-4 img-zoom">
                     <div class="card-body text-center">
                     <div class="h1 mb-3">
                         <i class="bi bi-1-circle text-light"></i>
@@ -20,7 +20,7 @@
                     </div>
                 </div>
 
-                <div class="card bg-secondary text-light mb-4">
+                <div class="card bg-secondary text-light mb-4 img-zoom">
                     <div class="card-body text-center">
                     <div class="h1 mb-3">
                         <i class="bi bi-2-circle text-light"></i>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                <div class="card bg-dark text-light mb-4">
+                <div class="card bg-dark text-light mb-4 img-zoom">
                     <div class="card-body text-center">
                     <div class="h1 mb-3">
                         <i class="bi bi-3-circle text-light"></i>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
 
-                <div class="card bg-secondary text-light mb-4">
+                <div class="card bg-secondary text-light mb-4 img-zoom">
                     <div class="card-body text-center">
                     <div class="h1 mb-3">
                         <i class="bi bi-4-circle text-light"></i>
@@ -79,7 +79,8 @@
 
 </template>
 
-<script></script>
+<script>
+</script>
 
 <style scoped>
     .header {

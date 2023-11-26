@@ -10,9 +10,9 @@
             Say goodbye to transportation hassles and hello to the freedom of 
             movement with our incredible offer starting at an unbeatable 14 € per day.
           </p>
-          <a class="btn btn-primary p-2" href="https://play.google.com/store/apps/details?id=com.primeleasing.citybee&hl=en&pli=1">Download App!</a>
+          <a class="btn btn-primary p-2 img-zoom" href="https://play.google.com/store/apps/details?id=com.primeleasing.citybee&hl=en&pli=1">Download App!</a>
         </div>
-        <img class="img-fluid w-50 rounded" :src="require('@/assets/corolla.jpg')" alt="">
+        <img class="img-fluid w-50 rounded hover-shadow img-zoom" :src="require('@/assets/corolla.jpg')" alt="">
       </div>
     </div>
   </section>
@@ -23,7 +23,7 @@
         On average, a private automobile remains unused or parked approximately 95% of the time!
       </h1>
       <div class="row g-4">
-        <div class="col">
+        <div class="col img-zoom">
           <div class="card bg-dark text-light">
             <div class="card-body text-center">
               <div class="h1 mb-3">
@@ -39,7 +39,7 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col img-zoom">
           <div class="card bg-secondary text-light">
             <div class="card-body text-center">
               <div class="h1 mb-3">
@@ -55,7 +55,7 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col img-zoom">
           <div class="card bg-dark text-light">
             <div class="card-body text-center">
               <div class="h1 mb-3">
@@ -85,7 +85,7 @@
             that most of the time stand still and fill neighborhoods and streets.
           </p>
         </div>
-        <img class="img-fluid w-50 rounded" :src="require('@/assets/camry.jpg')" alt="">
+        <img class="img-fluid w-50 rounded img-zoom" :src="require('@/assets/camry.jpg')" alt="">
       </div>
     </div>
   </section>
@@ -99,7 +99,7 @@
           <div class="card-body">
             <h5 class="card-title">{{ car.title }}</h5>
             <p class="text-secondary">Price: {{ car.price }}</p>
-            <router-link class="btn btn-primary mb-1" to="/car-var"><i class="bi bi-chevron-right"></i> Read More</router-link>
+            <router-link class="btn btn-primary mb-1 img-zoom" to="/car-var"><i class="bi bi-chevron-right"></i> Read More</router-link>
           </div>
         </div>
       </div>
@@ -113,8 +113,8 @@
       <h2 class="text-light m-0" id="author">{{ reviews[currentItem].name }}</h2>
       <p class="text-light lead px-5 pt-2" id="info">{{ reviews[currentItem].review }}</p>
       <div class="button-container">
-        <button class="prev-btn radius-8px" @click="changeReview('prev')">&lt;</button>
-        <button class="next-btn radius-8px" @click="changeReview('next')">&gt;</button>
+        <button class="prev-btn rounded img-zoom" @click="changeReview('prev')">&lt;</button>
+        <button class="next-btn rounded img-zoom" @click="changeReview('next')">&gt;</button>
       </div>
     </div>
   </div>
@@ -134,7 +134,7 @@
               <img :src="require('@/assets/yaris.jpg')" class="img-fluid" alt="">
             </div>
             <div class="carousel-item">
-              <img :src="require('@/assets/audi-a4.jpeg')" class="img-fluid" alt="">
+              <img :src="require('@/assets/audi-a4.jpg')" class="img-fluid" alt="">
             </div>
             <div class="carousel-item">
               <img :src="require('@/assets/tesla.jpg')" class="img-fluid" alt="">
@@ -191,7 +191,7 @@ export default {
         {id: 3, title: "Volkswagen Arteon", price: "32€ / Day + 0.26€ / KM", photo: "vw-arteon.jpeg"},
         {id: 4, title: "Tesla Model 3 Long Range", price: "50€ / Day + 0.48€ / KM", photo: "tesla-3.jpeg"},
         {id: 5, title: "BMW 320i", price: "35€ / Day + 0.32€ / KM", photo: "bmw-3series.jpeg"},
-        {id: 6, title: "Audi A4", price: "38€ / Day + 0.42€ / KM", photo: "audi-a4.jpeg"}
+        {id: 6, title: "Audi A4", price: "38€ / Day + 0.42€ / KM", photo: "audi-a4.jpg"}
       ],
       reviews: [
         {

@@ -65,13 +65,11 @@ body {
 }
 
 .img-zoom {
-  opacity: 0.9;
   transition: 0.3s;
 }
 
 .img-zoom:hover{
-  opacity: 1;
-  transform: scale(1.015);
+  transform: scale(1.02);
 }
 
 .gradient {

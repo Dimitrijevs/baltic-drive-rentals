@@ -1,5 +1,5 @@
 <template>
-    <h1 class="header-style text-center top fadeInTop">Log In Form</h1>
+    <!-- <h1 class="header-style text-center top fadeInTop">Log In Form</h1>
     <div class="container">
         <div class="box form-box">
             <form action="" method="post">
@@ -22,22 +22,62 @@
                 </div>
             </form>
         </div>
+    </div> -->
+
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row border rounded-5 p-4 bg-white shadow box-area">
+
+        <!--------------------------- Left Box ----------------------------->
+
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe;">
+            <div class="featured-image mb-3">
+                <img :src="require('@/assets/login-register.png')" class="img-fluid pt-3 pb-2">
+            </div>
+            <p class="text-white fs-2">Be Verified</p>
+            <p>Choto to tam tekst</p>
+        </div> 
+
+        <!-------------------- ------ Right Box ---------------------------->
+        
+        <div class="col-md-6 right-box">
+            <div class="row align-items-center">
+                <div class="header-text mb-4 text-center">
+                        <h2>Hello,Again</h2>
+                        <p>We are happy to have you back.</p>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
+                </div>
+                <div class="input-group mb-5">
+                    <button class="btn btn-lg btn-primary w-100 fs-6">Login</button>
+                </div>
+                <div class="row mt-auto">
+                    <small>Don't have account? <a href="#">Sign Up</a></small>
+                </div>
+            </div>
+        </div> 
+
     </div>
+</div>
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                email: "",
-                password: "",
-            }
-        }
-    }
+    // export default {
+    //     data() {
+    //         return {
+    //             email: "",
+    //             password: "",
+    //         }
+    //     }
+    // }
 </script>
 
 <style scoped>
-.container {
+/* .container {
     width: 30%;
     margin: 4% auto 8%;
     border-radius: 8px;
@@ -82,5 +122,5 @@
 .container > .box > form > .form-reg > a {
     margin-left: 10px;
     color: var(--skin);
-}
+} */
 </style>
