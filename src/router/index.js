@@ -8,23 +8,23 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/history-page',
-    name: 'history-page',
+    path: '/history',
+    name: 'history',
     component: () => import( '../views/historyView.vue')
   },
   {
-    path: '/rental-terms',
-    name: 'rental-terms',
+    path: '/rent',
+    name: 'rent',
     component: () => import( '../views/rentalTermsView.vue')
   },
   {
-    path: '/our-car-list',
-    name: 'our-car-list',
+    path: '/ourCars',
+    name: 'ourCars',
     component: () => import( '../views/ourCarListView.vue')
   },
   {
-    path: '/profile-page',
-    name: 'profile-page',
+    path: '/profile',
+    name: 'profile',
     component: () => import( '../views/profilePageView.vue')
   },
   {
@@ -33,23 +33,23 @@ const routes = [
     component: () => import( '../views/logInView.vue')
   },
   {
-    path: '/register-page',
-    name: 'register-page',
+    path: '/register',
+    name: 'register',
     component: () => import( '../views/registerView.vue')
   },
   {
-    path: '/car-var',
-    name: 'car-var',
+    path: '/car',
+    name: 'car',
     component: () => import('../views/carView.vue')
   },
   {
-    path: '/change-password',
-    name: 'change-password',
+    path: '/changePassword',
+    name: 'changePassword',
     component: () => import('../views/changePasswordView.vue')
   },
   {
-    path: '/rented-car',
-    name: 'rented-car',
+    path: '/rentedCar',
+    name: 'rentedCar',
     component: () => import('../views/rentedCarView.vue')
   },
 ]

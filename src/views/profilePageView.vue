@@ -5,7 +5,7 @@
             <h3>Emily Harrison</h3>
             <ul>
                 <li><router-link to="/" class="a-link">Home</router-link></li>
-                <li><router-link to="/change-password" class="a-link">Change Password</router-link></li>
+                <li><router-link to="/changePassword" class="a-link">Change Password</router-link></li>
                 <li><router-link to="/" class="a-link">Sign Out</router-link></li>
             </ul>
         </div>

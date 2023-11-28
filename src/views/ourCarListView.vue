@@ -111,7 +111,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ car.title }}</h5>
                                 <p class="text-secondary">Price: {{ car.price }}</p>
-                                <router-link class="btn btn-primary mb-1" to="/car-var"><i class="bi bi-chevron-right"></i> Read More</router-link>
+                                <router-link class="btn btn-primary mb-1" to="/car"><i class="bi bi-chevron-right"></i> Read More</router-link>
                             </div>
                             </div>
                         </div>

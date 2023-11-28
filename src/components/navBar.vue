@@ -6,19 +6,19 @@
           <div class="collapse navbar-collapse">
               <ul class="navbar-nav ms-auto">
                   <li class="nav-item d-flex align-items-center mx-2">
-                    <i class="bi bi-clock-history text-white"></i><router-link to="/history-page" class="nav-link p-1">Our History</router-link>
+                    <i class="bi bi-clock-history text-white"></i><router-link to="/history" class="nav-link p-1">Our History</router-link>
                   </li>
 
                   <li class="nav-item d-flex align-items-center mx-2">
-                    <i class="bi bi-file-earmark-ruled text-white"></i><router-link to="/rental-terms" class="nav-link p-1">Rental Terms</router-link>
+                    <i class="bi bi-file-earmark-ruled text-white"></i><router-link to="/rent" class="nav-link p-1">Rental Terms</router-link>
                   </li>
 
                   <li class="nav-item d-flex align-items-center mx-2">
-                    <i class="bi bi-car-front-fill text-white"></i><router-link to="/our-car-list" class="nav-link p-1">Our Car List</router-link>
+                    <i class="bi bi-car-front-fill text-white"></i><router-link to="/ourCars" class="nav-link p-1">Our Car List</router-link>
                   </li>
 
                   <li class="nav-item d-flex align-items-center mx-2">
-                    <i class="bi bi-person-circle text-white ms-5"></i><router-link to="/profile-page" class="nav-link p-1">Profile Page</router-link>
+                    <i class="bi bi-person-circle text-white ms-5"></i><router-link to="/profile" class="nav-link p-1">Profile Page</router-link>
                   </li>
 
                   <li class="nav-item d-flex align-items-center mx-2">
