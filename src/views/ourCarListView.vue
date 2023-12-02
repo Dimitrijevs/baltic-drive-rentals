@@ -107,7 +107,7 @@
                     <div class="container text-center">
                         <div class="row justify-content-between">
                             <div class="card col-3 p-0 m-3 bg-dark text-light" v-for="car in cars" :key="car.id">
-                            <img :src="require(`@/assets/${car.photo}`)" class="card-img-top img-fluid" alt="">
+                                <img :src="require(`@/assets/${car.photo}`)" class="card-img-top img-fluid" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">{{ car.title }}</h5>
                                 <p class="text-secondary">Price: {{ car.price }}</p>
@@ -119,7 +119,6 @@
                 </div>
             </section>
         </div>
-
     </div>
 </template>
 
@@ -150,10 +149,6 @@ export default {
 </script>
 
 <style scoped>
-.header {
-    margin-top: 100px;
-}
-
 .box {
     width: 90%;
 }
@@ -167,6 +162,6 @@ export default {
 }
 
 .box .right .brands img {
-    width: 140px;
+    width: 120px;
 }
 </style>

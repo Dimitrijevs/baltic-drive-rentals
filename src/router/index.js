@@ -47,11 +47,6 @@ const routes = [
     name: 'changePassword',
     component: () => import('../views/changePasswordView.vue')
   },
-  {
-    path: '/rentedCar',
-    name: 'rentedCar',
-    component: () => import('../views/rentedCarView.vue')
-  },
 ]
 
 const router = createRouter({

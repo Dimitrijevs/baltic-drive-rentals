@@ -82,8 +82,5 @@
 <script>
 </script>
 
-<style scoped>
-    .header {
-        margin-top: 100px;
-    }
+<style>
 </style>

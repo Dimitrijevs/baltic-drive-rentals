@@ -1,7 +1,7 @@
 <template>
 
     <div class="container">
-        <h1 class="text-center mb-3">Our History!</h1>
+        <h1 class="text-center mb-3 header">Our History!</h1>
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -44,10 +44,6 @@ export default {
 </script>
 
 <style scoped>
-    .container {
-        margin-top: 100px;
-    }
-
     .image-20 {
         width: 40px;
     }

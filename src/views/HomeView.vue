@@ -106,15 +106,15 @@
     </div>
   </section>
 
-  <div class="reviews">
+  <div class="reviews text-center mx-auto">
     <h1 class="mb-4">Our Reviews</h1>
-    <div class="user-box bg-primary">
-      <img class="rounded-circle" :src="reviews[currentItem].photo" alt="#">
+    <div class="user-box bg-primary mx-auto">
+      <img class="rounded-circle my-4" :src="reviews[currentItem].photo" alt="#">
       <h2 class="text-light m-0" id="author">{{ reviews[currentItem].name }}</h2>
       <p class="text-light lead px-5 pt-2" id="info">{{ reviews[currentItem].review }}</p>
       <div class="button-container">
-        <button class="prev-btn rounded img-zoom" @click="changeReview('prev')">&lt;</button>
-        <button class="next-btn rounded img-zoom" @click="changeReview('next')">&gt;</button>
+        <button class="rounded h1 bg-primary border-0 me-2 pb-2" @click="changeReview('prev')">&lt;</button>
+        <button class="rounded h1 bg-primary border-0 ms-2 pb-2" @click="changeReview('next')">&gt;</button>
       </div>
     </div>
   </div>
@@ -239,36 +239,15 @@ export default {
     width: 700px;
   }
 
-  .reviews {
+  .reviews, .reviews .user-box {
     width: 70%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .reviews .user-box {
-    width: 70%;
-    margin: 0 auto;
   }
 
   .reviews .user-box img {
     width: 30%;
-    margin: 30px 0;
   }
 
   .reviews .user-box p {
     min-height: 124px;
   }
-
-  .reviews > .user-box > .button-container > button{
-    background-color: transparent;
-    border: none;
-    margin: 10px;
-    transition: 0.3s;
-    font-size: 1.8rem;
-  }
-
-  .reviews > .user-box > .button-container > button:hover {
-    background-color: var(--skin);
-  }
-
 </style>

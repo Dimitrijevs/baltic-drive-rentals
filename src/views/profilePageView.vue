@@ -1,61 +1,110 @@
 <template>
-    <div class="profile">
-        <div class="profileImg-navBar text-center radius-8px">
+    <div class="profile d-flex mx-auto mb-5">
+        <div class="profileImg-navBar text-center rounded bg-light me-2 p-5">
             <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="" class="rounded-circle">
-            <h3>Emily Harrison</h3>
+            <h3 class="mt-2 h2 text-center">Emily Harrison</h3>
             <ul>
-                <li><router-link to="/" class="a-link">Home</router-link></li>
-                <li><router-link to="/changePassword" class="a-link">Change Password</router-link></li>
-                <li><router-link to="/" class="a-link">Sign Out</router-link></li>
+                <li class="m-1"><router-link to="/" class="text-secondary h5 text-decoration-none">Home</router-link></li>
+                <li class="m-1"><router-link to="/changePassword" class="text-secondary h5 text-decoration-none">Change Password</router-link></li>
+                <li class="m-1"><router-link to="/" class="text-secondary h5 text-decoration-none">Sign Out</router-link></li>
             </ul>
         </div>
         <div class="right-info">
-            <div class="about radius-8px">
+            <div class="about rounded bg-light p-5">
                 <h3 class="text-center">About</h3>
-                <ul>
+                <ul class="list-group list-group-flush lead">
                     <li>
-                        <p>Full Name</p>
+                        <p class="fw-bold m-0">Full Name</p>
                         <span>Emily Harrison</span>
                     </li>
-                    <hr>
+                    <hr class="m-1">
                     <li>
-                        <p>Email</p>
-                        <span>chtototam@gmail.com</span>
+                        <p class="fw-bold m-0">Email</p>
+                        <span>chtototam@gmail.com</span> 
                     </li>
-                    <hr>
+                    <hr class="m-1">
                     <li>
-                        <p>Phone</p>
+                        <p class="fw-bold m-0">Phone</p>
                         <span>+371 20776969</span>
                     </li>
-                    <hr>
+                    <hr class="m-1">
                     <li>
-                        <p>Address</p>
+                        <p class="fw-bold m-0">Address</p>
                         <span>Koronavirus iela 27-45</span>
                     </li>
                 </ul>
             </div>
-            <div class="rent-history radius-8px">
+            <div class="rent-history rounded bg-light mt-2 p-5 overflow-auto">
                 <h3 class="text-center">Rent History</h3>
-                <ul class="rents">
+                <ul class="rents list-unstyled">
                     <li class="rent">
-                        <p>Car Name</p>
-                        <p>Total Days</p>
-                        <p>Total KM</p>
-                        <p class="radius-8px">Total Price</p>
+                        <p class="m-1">Car Name</p>
+                        <p class="m-1">Total Days</p>
+                        <p class="m-1">Total KM</p>
+                        <p class="rounded py-1 px-2 m-1">Total Price</p>
                     </li>
-                    <hr>
+                    <hr class="m-1">
                     <li class="rent">
-                        <p>Car Name</p>
-                        <p>Total Days</p>
-                        <p>Total KM</p>
-                        <p class="radius-8px">Total Price</p>
+                        <p class="m-1">Car Name</p>
+                        <p class="m-1">Total Days</p>
+                        <p class="m-1">Total KM</p>
+                        <p class="rounded py-1 px-2 m-1">Total Price</p>
                     </li>
-                    <hr>
+                    <hr class="m-1">
                     <li class="rent">
-                        <p>Car Name</p>
-                        <p>Total Days</p>
-                        <p>Total KM</p>
-                        <p class="radius-8px">Total Price</p>
+                        <p class="m-1">Car Name</p>
+                        <p class="m-1">Total Days</p>
+                        <p class="m-1">Total KM</p>
+                        <p class="rounded py-1 px-2 m-1">Total Price</p>
+                    </li>
+                    <hr class="m-1">
+                    <li class="rent">
+                        <p class="m-1">Car Name</p>
+                        <p class="m-1">Total Days</p>
+                        <p class="m-1">Total KM</p>
+                        <p class="rounded py-1 px-2 m-1">Total Price</p>
+                    </li>
+                    <hr class="m-1">
+                    <li class="rent">
+                        <p class="m-1">Car Name</p>
+                        <p class="m-1">Total Days</p>
+                        <p class="m-1">Total KM</p>
+                        <p class="rounded py-1 px-2 m-1">Total Price</p>
+                    </li>
+                    <hr class="m-1">
+                    <li class="rent">
+                        <p class="m-1">Car Name</p>
+                        <p class="m-1">Total Days</p>
+                        <p class="m-1">Total KM</p>
+                        <p class="rounded py-1 px-2 m-1">Total Price</p>
+                    </li>
+                    <hr class="m-1">
+                    <li class="rent">
+                        <p class="m-1">Car Name</p>
+                        <p class="m-1">Total Days</p>
+                        <p class="m-1">Total KM</p>
+                        <p class="rounded py-1 px-2 m-1">Total Price</p>
+                    </li>
+                    <hr class="m-1">
+                    <li class="rent">
+                        <p class="m-1">Car Name</p>
+                        <p class="m-1">Total Days</p>
+                        <p class="m-1">Total KM</p>
+                        <p class="rounded py-1 px-2 m-1">Total Price</p>
+                    </li>
+                    <hr class="m-1">
+                    <li class="rent">
+                        <p class="m-1">Car Name</p>
+                        <p class="m-1">Total Days</p>
+                        <p class="m-1">Total KM</p>
+                        <p class="rounded py-1 px-2 m-1">Total Price</p>
+                    </li>
+                    <hr class="m-1">
+                    <li class="rent">
+                        <p class="m-1">Car Name</p>
+                        <p class="m-1">Total Days</p>
+                        <p class="m-1">Total KM</p>
+                        <p class="rounded py-1 px-2 m-1">Total Price</p>
                     </li>
                 </ul>
             </div>
@@ -68,34 +117,23 @@
 </script>
 
 <style scoped> 
-h3 {
-    font-size: 1.8rem;
-}
 .profile {
-    display: flex;
     width: 70%;
-    margin: 8% auto;
+    margin-top: 100px;
 }
 
 .profile .right-info {
     width: 100%;
 }
 
+.profile .right-info .rent-history {
+    min-height: 400px;
+    max-height: 400px;
+}
+
 .profile .right-info .rent-history .rents .rent p:nth-child(4) {
     background-color: var(--black);
     color: var(--skin);
-    padding: 6px 8px;
-}
-
-.profile .profileImg-navBar,
-.profile .right-info .about,
-.profile .right-info .rent-history {
-    background-color: var(--white-white);
-    padding: 30px;
-}
-
-.profile .profileImg-navBar {
-    margin-right: 8px;
 }
 
 .profile .profileImg-navBar ul,
@@ -119,10 +157,6 @@ h3 {
     text-decoration-color: var(--white-white);
 }
 
-.a-link::before {
-    background-color: var(--black);
-}
-
 .profile .profileImg-navBar img {
     width: 240px;
 }
@@ -132,15 +166,5 @@ h3 {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-}
-
-.profile .right-info .about ul li p, 
-.profile .right-info .rent-history ul li p{
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-.profile .right-info .rent-history {
-    margin-top: 8px;
 }
 </style>
