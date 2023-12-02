@@ -1,86 +1,43 @@
 <template>
-    <h1 class="header-style text-center top fadeInTop">Log In Form</h1>
-    <div class="container">
-        <div class="box form-box">
-            <form action="" method="post">
-                <div class="field">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" v-bind:value="email" required>
-                </div>
 
-                <div class="field">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" v-bind:value="password" required>
-                </div>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="row border rounded-5 p-4 bg-white shadow box-area">
 
-                <div class="field">
-                    <input type="submit" name="submit" value="Log In!" @click="logIn" required>
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe;">
+                <div class="featured-image mb-3">
+                    <img :src="require('@/assets/login-register.png')" class="img-fluid pt-3 pb-2">
                 </div>
-
-                <div class="field form-reg">
-                    Don't have account?<router-link to="/register-page">Sign up now!</router-link>
+                <p class="text-white h3 mb-2">Be Verified</p>
+                <p class="text-white text-center mt-0 px-3">Level up your rental experience! Get verified and unlock the door to our sleek fleet of cars.</p>
+            </div> 
+            
+            <div class="col-md-6 right-box">
+                <div class="row align-items-center mb-5">
+                    <div class="header-text mb-4 text-center">
+                            <h2>Hello, Again</h2>
+                            <p>We are happy to have you back.</p>
+                    </div>
+                    <form action="/" method="post">
+                        <div class="input-group mb-3">
+                            <input class="form-control form-control-lg bg-light fs-6" type="email" name="email" id="email" placeholder="Email address" autocomplete="off" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" name="password" id="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" autocomplete="off" required>
+                        </div>
+                        <div class="input-group mb-5">
+                            <input class="btn btn-lg btn-primary w-100 fs-6" type="submit" name="submit" value="Log In!" required>
+                        </div>
+                    </form>
                 </div>
-            </form>
+                <p class="d-flex justify-content-end mb-0 pt-5">Don't have account?<a class="ps-1" href="/register">Sign Up</a></p>
+            </div> 
         </div>
     </div>
+
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                email: "",
-                password: "",
-            }
-        }
-    }
 </script>
 
 <style>
-.container {
-    width: 30%;
-    margin: 4% auto 8%;
-    border-radius: 8px;
-}
-
-.container > .box > form > .field {
-    margin: 15px;
-    font-size: 1.2rem;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.container > .box > form > .field > input {
-    width: 100%;
-    padding: 8px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    margin: 4px 0 24px;
-}
-
-.container > .box > form > .field > input[type=submit] {
-    margin: 0;
-    width: 100%;
-    font-size: 1.5rem;
-    background-color: var(--skin);
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.container > .box > form > .field > input[type=submit]:hover {
-    background-color: #fcd47d;
-}
-
-.container > .box > form > .form-reg {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.container > .box > form > .form-reg > a {
-    margin-left: 10px;
-    color: var(--skin);
-}
 </style>

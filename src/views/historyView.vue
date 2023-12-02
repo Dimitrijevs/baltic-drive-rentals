@@ -1,168 +1,128 @@
 <template>
-    <h1 class="header-style text-center top fadeInTop">Our History!</h1>
-    <div class="timeline">
-        <div class="history-container container-left-container">
-            <img :src="require('@/assets/google.png')" alt="#">
-            <div class="text-box gradient img-zoom">
-                <h2>We're Open for Business!</h2>
-                <small>2015</small>
-                <p>
-                    Our office in Riga is now up and running, 
-                    with an exciting fleet of 20 cars ready to whisk you away on unforgettable city adventures
-                </p>
-            </div>
-        </div>
 
-        <div class="history-container container-right-container">
-            <img :src="require('@/assets/vw-logo.png')" alt="#">
-            <div class="text-box gradient img-zoom">
-                <h2>Revving Up Our Fleet!</h2>
-                <small>2016</small>
-                <p>
-                    We've expanded our auto park with 30 top-notch Volkswagen vehicles, 
-                    featuring the likes of Golf, Polo, and Touareg, all for our valued customers to enjoy
-                </p>
+    <div class="container">
+        <h1 class="text-center mb-3 header">Our History!</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div id="content">
+                            <ul class="timeline" v-for="card in cards" :key="card.id">
+                                <li class="event" :data-date="card.date">
+                                    <div class="d-flex align-items-end justify-content-between mb-2">
+                                        <h4 class="fw-bold mb-0">{{ card.title }}</h4>
+                                        <img class="w-10  image-20" :src="require(`@/assets/${card.image}`)" alt="#">
+                                    </div>
+                                    <p>{{ card.description }}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="history-container container-left-container">
-            <img :src="require('@/assets/lit.png')" alt="#">
-            <div class="text-box gradient img-zoom">
-                <h2>Sveiki, Lietuva!</h2>
-                <small>2017</small>
-                <p>
-                    We proudly opened our very first office in Vilnius, 
-                    extending a warm welcome to Lithuanian citizens and making our cars available for your exploration
-                </p>
-            </div>
-        </div>
-
-        <div class="history-container container-right-container">
-            <img :src="require('@/assets/tesla.png')" alt="#">
-            <div class="text-box gradient img-zoom">
-                <h2>Electrifying News!</h2>
-                <small>2018</small>
-                <p>
-                    The Americans are here! Now, in Latvia, 
-                    you can experience the thrill of driving a Tesla Model 3 for your everyday adventures
-                </p>
-            </div>
-        </div>
-
-        <div class="history-container container-left-container">
-            <img :src="require('@/assets/toyota.png')" alt="#">
-            <div class="text-box gradient img-zoom">
-                <h2>Introducing the Toyota Lineup!</h2>
-                <small>2019</small>
-                <p>
-                    We've just placed orders with the official dealership to add a diverse range of Toyota vehicles to our fleet, 
-                    ensuring even more variety for our valued customers
-                </p>
-            </div>
-        </div>
-
-        <div class="history-container container-right-container">
-            <img :src="require('@/assets/est.png')" alt="#">
-            <div class="text-box gradient img-zoom">
-                <h2>Tere, Eesti!</h2>
-                <small>2020</small>
-                <p>
-                    Proudly inaugurated our first office in Tallinn, 
-                    bringing our cars within reach of Estonian citizens for an exceptional driving experience
-                </p>
-            </div>
-        </div>
+        <h1 class="text-center m-3">And our work continues...</h1>
     </div>
 
-    <h1 class="header-style text-center bottom">And our work continues...</h1>
 </template>
 
-<script></script>
-
-<style>
-.timeline {
-    position: relative;
-    max-width: 1000px;
-    margin: 150px auto;
-    box-sizing: border-box;
-}
-
-.history-container {
-    padding: 10px 50px;
-    position: relative;
-    width: 40%;
-    animation: movedown 1s linear forwards;
-    opacity: 0;
-}
-
-@keyframes movedown {
-    0% {
-        opacity: 1;
-        transform: translateY(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
+<script>
+export default {
+    data() {
+        return {
+            cards: [
+                {id: 1, date: 2015 ,title: "We're Open for Business!", image: "google.png", description: "Our office in Riga is now up and running, with an exciting fleet of 20 cars ready to whisk you away on unforgettable city adventures"},
+                {id: 1, date: 2016 ,title: "Revving Up Our Fleet!", image: "vw-logo.png", description: "We've expanded our auto park with 30 top-notch Volkswagen vehicles, featuring the likes of Golf, Polo, and Touareg, all for our valued customers to enjoy"},
+                {id: 1, date: 2017 ,title: "Sveiki, Lietuva!", image: "lit.png", description: "We proudly opened our very first office in Vilnius, extending a warm welcome to Lithuanian citizens and making our cars available for your exploration"},
+                {id: 1, date: 2018 ,title: "Electrifying News!", image: "tesla.png", description: "The Americans are here! Now, in Latvia and Lithuania, you can experience the thrill of driving a Tesla Model 3 for your everyday adventures"},
+                {id: 1, date: 2019 ,title: "Introducing the Toyota Lineup!", image: "toyota.png", description: "We've just placed orders with the official dealership to add a diverse range of Toyota vehicles to our fleet, ensuring even more variety for our valued customers"},
+                {id: 1, date: 2020 ,title: "Tere, Eesti!", image: "est.png", description: "Proudly inaugurated our first office in Tallinn, bringing our cars within reach of Estonian citizens for an exceptional driving experience"},
+            ]
+        }
     }
 }
+</script>
 
-.history-container img {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    right: -20px;
-    top: 32px;
-    z-index: 1;
-}
-
-.text-box {
-    padding: 20px 30px;
-    position: relative;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.container-left-container {
-    left: 0;
-}
-
-.container-right-container {
-    left: 50%;
-}
-
-.container-right-container img{
-    left: -20px;
-}
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 100%;
-    background: #000;
-    top: 0;
-    left: 50%;
-    margin-left: -3px;
-    z-index: -1;
-    animation: moveline 6s linear forwards;
-}
-
-@keyframes moveline {
-    0%{
-        height: 0;
+<style scoped>
+    .image-20 {
+        width: 40px;
     }
-    100% {
-        height: 100%;
+
+    .timeline {
+        border-left: 4px solid #0d6efd;
+        background: #FBFBFB;
+        margin: 0 auto;
+        position: relative;
+        padding: 50px;
+        list-style: none;
+        text-align: left;
+        max-width: 40%;
     }
-}
 
-.text-box > h2 {
-    font-weight: 600;
-}
+    @media (max-width: 767px) {
+        .timeline {
+            max-width: 98%;
+            padding: 25px;
+        }
+    }
 
-.text-box > small {
-    display: inline-block;
-    margin-bottom: 15px;
-}
+    .timeline .event {
+        border-bottom: 1px solid #9FA6B2;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        position: relative;
+    }
+
+    @media (max-width: 767px) {
+        .timeline .event {
+            padding-top: 30px;
+        }
+    }
+
+    .timeline .event:last-of-type {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: none;
+    }
+
+    .timeline .event:before,
+    .timeline .event:after {
+        position: absolute;
+        display: block;
+        top: 0;
+    }
+
+    .timeline .event:before {
+        left: -207px;
+        content: attr(data-date);
+        text-align: right;
+        font-weight: 100;
+        font-size: 0.9em;
+        min-width: 120px;
+    }
+
+    @media (max-width: 767px) {
+        .timeline .event:before {
+            left: 0px;
+            text-align: left;
+        }
+    }
+
+    .timeline .event:after {
+        -webkit-box-shadow: 0 0 0 3px #0d6efd;
+        box-shadow: 0 0 0 3px #0d6efd;
+        left: -55.8px;
+        background: #fff;
+        border-radius: 50%;
+        height: 9px;
+        width: 9px;
+        content: "";
+        top: 5px;
+    }
+
+    @media (max-width: 767px) {
+        .timeline .event:after {
+            left: -31.8px;
+        }
+    }
 </style>
